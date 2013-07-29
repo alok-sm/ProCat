@@ -1,0 +1,6 @@
+<p>These are the current projects in our system</p>
+<ul id="projects">
+<% @project.each do |c| %>
+<li><%= link_to c.p_title, {:action => 'show', :id => c.id} -%></li>
+<% end %>
+</ul>

@@ -1,0 +1,6 @@
+<meta http-equiv="Refresh" content="0; url=/projects/<%= @upload.project %>">
+Redirecting you to Your project page
+<% @upload.url = @upload.file.url %>
+<% @upload.save %>
+Click <a href="/projects/<%= @upload.project %>">here</a> if You aren't automatically redirected.
+

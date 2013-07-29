@@ -1,0 +1,943 @@
+<% if user_signed_in? and current_user.access_level != 3 %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Test2</title>
+<link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dashboard.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dept.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/home.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/projects.css?body=1" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/dashboard.js?body=1" type="text/javascript"></script>
+<script src="/assets/dept.js?body=1" type="text/javascript"></script>
+<script src="/assets/home.js?body=1" type="text/javascript"></script>
+<script src="/assets/projects.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="If+cU3KeuZl65228b3j0eb9MR/NoznyglqrwM0MDAR0=" name="csrf-token" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").fadeToggle("fast");
+    $("#panel3").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+  });
+});
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").fadeToggle("fast");
+  });
+});
+$(document).ready(function(){
+   $("#flip2").click(function(){
+    $("#panel2").fadeToggle("fast");
+  });
+});
+$(document).ready(function(){
+   $("#flip3").click(function(){
+    $("#panel3").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+  });
+}); 
+
+
+
+$(document).ready(function(){
+   $("#fliph1").click(function(){
+    $("#panel").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph2").click(function(){
+    $("#panel1").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph3").click(function(){
+    $("#panel2").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph4").click(function(){
+    $("#panel3").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#usr_name").click(function(){
+    $("#panel4").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel3").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph5").click(function(){
+    $("#panel4").fadeOut("fast");
+  }); 
+});
+
+$(document).ready(function(){
+   $("#fliph6").click(function(){
+    $("#panel5").fadeOut("fast");
+  }); 
+});
+
+$(document).ready(function(){
+   $("#depsel").click(function(){
+    $("#panel5").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel3").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+  }); 
+});
+
+
+
+$(document).ready(function(){
+   $("#flipform1").click(function(){
+    $("#panelform1").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1a").click(function(){
+    $("#panelform").fadeIn("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1b").click(function(){
+ $("#panelform2").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1c").click(function(){
+ $("#panelform1").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1d").click(function(){
+ $("#panelform3").fadeIn("fast");
+$("#panelform2").fadeOut("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1e").click(function(){
+$("#panelform2").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1f").click(function(){
+    $("#panelform4").fadeIn("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1g").click(function(){
+ $("#panelform3").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1h").click(function(){
+    $("#panelform5").fadeIn("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1i").click(function(){
+    $("#panelform4").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1j").click(function(){
+    $("#panelform6").fadeIn("fast");
+ $("#panelform5").fadeOut("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+   
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1k").click(function(){
+    $("#panelform5").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+</script>
+
+<style type="text/css">  
+
+
+
+.panels
+{
+z-index:10;
+position:absolute;
+}
+
+
+#maintable
+{
+width:1024px;
+position:relative;
+
+}
+#amk
+{
+border-radius: 10px 10px 10px 10px;
+}
+
+
+
+
+
+h2.a3
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 18px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 70%;
+	font-weight: normal;
+}
+h1.a4
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 30px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 50%;
+	font-weight: normal;
+}
+body 
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 200;
+	color: #000000;
+	
+}
+
+
+#menu
+{
+	
+	overflow: hidden;
+	width: 1024px;
+	padding: 0px 0px;
+	margin: 0px auto 1px auto;
+	background:#555555;
+	border-radius: 0px 0px 13px 13px;
+	font-size: 20px;
+	color: white;
+}
+#menu a,#menu span
+{
+	display: inline-block;
+	padding: 15px 40px 15px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 200;
+	color: white;
+	border: none;
+}
+
+
+
+#menu div
+{
+display: inline-block;
+list-style: none;
+line-height: normal;
+}
+
+#menu a:hover
+ {
+	text-decoration: none;
+        
+}
+ #menu #flip a {
+	text-decoration: none;
+	background:#737373;
+	color: white;
+	text-align:left;
+}
+
+#menu .last {
+margin-left:-70%;
+margin-right:-360%;
+}
+#flip
+{
+
+border:solid 2px #c3c3c3;
+
+}
+#panel,#panel1,#panel2,#panel3, #panel4, #panel5
+{
+
+font-color: white;
+padding:5px;
+text-align:center;
+background-color: #555555;
+border:solid 2px #c3c3c3;
+border-radius: 0px 0px 10px 10px;
+box-shadow: 0px 0px 7px 3px #555555;
+}
+#panel
+{
+margin-top:0%;
+margin-right:-135%;
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel1
+{
+margin-top:0%;
+margin-right:-70%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel2
+{
+margin-top:0%;
+margin-right:-70%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel3
+{
+margin-top:0%;
+margin-right:-620%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel4
+{
+
+margin-top:0%;
+margin-right:-500%;
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel5
+{
+border-radius: 10px 10px 10px 10px;
+width:350px;
+text-align:left;
+margin-top:-23%;
+padding:2px;
+display:none;
+opacity:1;
+z-index:2;
+}
+#panelform1,#panelform2,#panelform3,#panelform4,#panelform5,#panelform6
+{
+border-radius:10px 10px 10px 10px;
+position:absolute;
+display:none;
+}
+#panelform
+{
+border-radius:10px 10px 10px 10px;
+position:absolute;
+}
+#panelform1
+{
+
+z-index:2;
+}
+#panelform2
+{
+
+z-index:3;
+}
+#panelform3
+{
+
+z-index:4;
+}
+#panelform4
+{
+margin-top:-1%;
+z-index:5;
+}
+#panelform5
+{
+margin-top:-1%;
+z-index:6;
+}
+#panelform6
+{
+
+z-index:7;
+}
+.menu_buttons
+{
+text-align:center;
+}
+.sign_out
+{
+color:white;
+text-decoration:none;
+}
+
+</style>
+<body bgcolor="#DFDFDF">
+</head>
+<body>
+
+
+
+
+
+<center>
+<div id="maintable">
+
+
+
+<div class="panels">
+
+<table width="250" id="panel" >
+<tr><td width="250" >
+<font color="white">
+<h4><div id="fliph1">&nbsp<&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDEPARTMENTS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4><div id="flip1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBE    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp></h4><hr>
+<h4><div id="flip2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspM.Tech&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp></h4><hr>
+
+<h4><a href="/dept/bca" style="text-decoration:none;"><font color="white">BCA</font></a></h4><hr>
+
+<h4><a href="/dept/mca" style="text-decoration:none;"><font color="white">MCA</font></a></h4><hr>
+
+<h4><a href="/dept/mba" style="text-decoration:none;"><font color="white">MBA</font></a></h4>
+
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="350"  id="panel1" >
+<tr><td width="350">
+<font color="white">
+<h4 id="fliph2"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspB.E
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4><a href="/dept/bt" style="text-decoration:none;"><font color="white">Bio Technology</font></a></h4><hr>
+
+<h4><a href="/dept/cv" style="text-decoration:none;"><font color="white">Civil</font></a></h4><hr>
+
+<h4><a href="/dept/cs" style="text-decoration:none;"><font color="white">Computer Science</font></a></h4><hr>
+
+<h4><a href="/dept/ec" style="text-decoration:none;"><font color="white">Electronics and Communication</font></a></h4><hr>
+
+<h4><a href="/dept/ee" style="text-decoration:none;"><font color="white">Electricals and Electronics</font></a></h4><hr>
+
+<h4><a href="/dept/is" style="text-decoration:none;"><font color="white">Information Science</font></a></h4><hr>
+
+<h4><a href="/dept/me" style="text-decoration:none;"><font color="white">Mechanical</font></a></h4><hr>
+
+<h4><a href="/dept/tc" style="text-decoration:none;"><font color="white">Telecommunication</font></a></h4>
+</font></td></tr>
+</table>
+</div>
+
+<div class="panels">
+<table width="350"  id="panel2" >
+<tr><td width="350">
+
+<font color="white">
+<h4 id="fliph3"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspM.Tech
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+
+<h4><a href="/dept/mcs" style="text-decoration:none;"><font color="white">Computer Science and Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mec" style="text-decoration:none;"><font color="white">Electronics and Communication Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mme" style="text-decoration:none;"><font color="white">Mechanical Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mse" style="text-decoration:none;"><font color="white">Software Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mwt" style="text-decoration:none;"><font color="white">Web Technologies</font></a></h4>
+
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="250"  id="panel3" >
+<tr><td width="250">
+<font color="white">
+<h4 id="fliph4"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMORE
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4>About</h4><hr>
+<h4><a href="http://pesit.pes.edu/contact-address" style="text-decoration:none;"><font color="white">Contact Us</font></a></h4><hr>
+<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4>
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="250"  id="panel4" >
+<tr><td width="250">
+<font color="white">
+
+<h4 id="fliph5"><% if user_signed_in? %><&nbsp&nbsp<%=current_user.username%>&nbsp<% end %>
+</h4><hr>
+
+<h4><a href="#" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
+<h4><a href="/users/edit" style="text-decoration:none;"><font color="white">Edit Profile</font></a></h4><hr>
+<h4><font color="white"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>'sign_out'%></font></h4>
+</font></td></tr>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table id="menu" valign="top" colspan="3">
+	<tr>
+			
+
+		<td width="200" class="menu_buttons">
+			<a href="/dashboard"id="home_button">home</a>	
+		</td >
+
+		<td width="200" class="menu_buttons">
+			<span style="cursor:pointer;" id="flip">Department</span>	
+		</td>
+                <td width="200" class="menu_buttons">
+			<a href="/projects" id="search">Search</a>	
+		</td>
+			<% if user_signed_in? %>
+				<td width="324" class="menu_buttons" style="font-size:17px;font-color:white;" id=usr_name >
+					<%=current_user.username.upcase%>	
+				</td>
+			<%else%>
+
+				<td width="324" class="menu_buttons" style="font-size:17px;font-color:white;">
+					<a href="/users/sign_in" id="login">Login/Signup</a>
+				</td>
+			<%end%>
+
+		<td class="last" id="flip3" width="100" class="menu_buttons">
+			<span style="cursor:pointer;">More</span>	
+		</td>
+	</tr>
+</table>
+
+<table border="0" id="amk" align="center" bgcolor="white" width="1024" cellspacing="4" summary="Project Form Fields"height="660">
+<tr>
+<td width="150"></td>
+<td width="724"  valign="top"colspan="3">
+<center><h1>ADD NEW PROJECT</h1></center>
+<%= form_for @project do |f| %>
+
+<div id="panelform"><table cellspacing="0" width="700" class="card0"><br>
+<tr><td width="100"></td>
+<td>
+<br>
+<center><b>All fields are mandatory</b></center>
+<br><br>
+<b><%= f.label(:p_title,"Project Title") %>&nbsp:</b>
+   &nbsp&nbsp<%= f.text_field(:p_title) %>
+  <br><br>
+<b><span id="depsel" style="cursor:pointer;">Click to Select Department</span></b><br><br>
+    <div class="panels">
+<table width="250"  id="panel5" >
+<tr><td width="250">
+
+<font color="white">
+
+<br>
+<center><font id="fliph6" size="4.5" style="margin-bottom:1000px;cursor:pointer;"><b><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClick to Close
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></font></center><hr>
+
+
+&nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_bt %>
+      BE-Biotechnology</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_cv %>
+      BE-Civil</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_cs %>
+      BE-Computer Science</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_ee %>
+      BE-Electrical And Electronics</label>
+  <br>
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_ec %>
+      BE-Electronics And Communication</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_is %>
+      BE-Information Science</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_me %>
+      BE-Mechanical</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_tc %>
+      BE-Telecommunication</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_bca %>
+      BCA</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mba %>
+      MBA</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mca %>
+      MCA</label>
+ <br>
+   
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mcs %>
+      MTech-Computer Science</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mec %>
+      MTech-Electronics And Communications</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mme %>
+      MTech-Mechanical</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mse %>
+      MTech-Software Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mwt %>
+      MTech-Web Technologies</label>
+  <br><br>
+
+
+</font>
+
+</td></tr>
+</table>
+</div> 
+   <b><%= f.label(:objective,"Objective Of the Project :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:objective, :size => '40x5') %><br><br>
+<b><%= f.label(:status,"Status Of The Project") %></b>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "o"%>Open</label>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "c"%>Closed</label>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "p"%>Past</label>
+  <br><br>
+<center><h4 id="flipform1">next&nbsp></h4></center>
+</td></tr>
+</table>
+</div>
+
+
+
+<div  id="panelform1"><table class="card0" width="700"cellspacing="0">
+<tr><td width="100"></td>
+<td>
+<center>
+<h4 id="flipform1a"><&nbspBack</h4>
+<b>All fields are mandatory</b><br><br></center>
+<b><%= f.label(:p_type1,"Project Type") %></b><br>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "research"%>Research</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "mini"%>Mini</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "hobby"%>Hobby</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "funded"%>Funded</label> 
+<br><br>
+<b> <%= f.label(:p_type2,"Impact Type") %></b><br>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "sociological"%>Sociological</label>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "economical"%>Economical</label>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "technological"%>Technological</label><br><br><br><br><br><br>
+<center><h4 id="flipform1b">next&nbsp></h4>
+</center>
+</td></tr>
+</table></div>
+
+<div id="panelform2"><table class="card0" width="700" cellspacing="0">
+<tr><td width="100"></td>
+<td><center>
+<h4 id="flipform1c"><&nbspBack</h4>
+<b>These are non-mandatory fields</b></center>
+<br><br>
+ <b> <%= f.label(:tags,"Tags :") %>&nbsp:</b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_field(:tags, :placeholder => "Format Is Tag1;Tag2;Tag3", :size => "40") %>
+<br><br>
+
+<% if current_user.access_level = 2 %>
+<b><%= f.label(:department,"Student List :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:department, :size => '40x5', :value => current_user.code, :placeholder => "Format Is   Id1;Id2;Id3") %><br><br>
+<b><%= f.label(:guides,"Guides List :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5', :placeholder => "Format Is   Id1;Id2;Id3") %>
+<% else %>
+<% if current_user.access_level = 1 %>
+<b><%= f.label(:department,"Student List :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:department, :size => '40x5', :placeholder => "Format Is   Id1;Id2;Id3") %><br><br>
+<b><%= f.label(:guides,"Guides List :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5', :value => current_user.code, :placeholder => "Format Is   Id1;Id2;Id3") %>
+<% end %>
+<% end %>
+<center><h4 id="flipform1d">next&nbsp></h4>
+</center>
+</td></tr>
+</table></div>
+
+<div id="panelform3"><table class="card0" width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td><center>
+<h4 id="flipform1e"><&nbspBack</h4>
+<b>These are non mandatory fields</b></center>
+<br><br>
+   <b><%= f.label(:description, "Description :") %></b>
+   <br><br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:description, :size => '40x5') %><br>
+   <b><br><%= f.label(:requirements, "Student Requirements :") %></b>
+   <br><br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:requirements, :size => '40x5') %>
+ <br><br>
+<b> Period Of Working :</b>
+<%= f.date_field :start_date %> to <%= f.date_field :end_date %>
+<center><h4 id="flipform1f">next&nbsp></h4>
+</center>
+</tr></td>
+</table></div>
+
+<div id="panelform4"><table class="card0" width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td><center>
+<h4 id="flipform1g"><&nbspBack</h4>
+<b>These are non mandatory fields</b></center>
+<br>
+ <b> <%= f.label(:if_award,"Did The Project Win Any Awards?") %></b>
+<% if @project.if_award == true %>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "1", { :checked => true }%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "0" %>No</label>
+<% else %>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "1"%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "0", { :checked => true }%>No</label>
+<% end %>
+<br><br>
+  <b><%= f.label(:award_list,"Any Accompanying Details?") %></b>
+ <br> &nbsp&nbsp&nbsp&nbsp<%= f.text_area(:award_list, :size => '40x5') %>
+<br><br>
+ <b> <%= f.label(:if_patent,"Has The Project Been Patented?") %></b>
+<% if @project.if_patent == true %>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "1", { :checked => true }%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "0" %>No</label>
+<% else %>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "1"%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "0", { :checked => true }%>No</label>
+<% end %>
+<br><br>
+  <b><%= f.label(:patent_stuff,"Any Accompanying Details?") %></b>
+  <br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:patent_stuff, :size => '40x5') %>
+
+<center><h4 id="flipform1h">next&nbsp></h4>
+</center>
+</tr></td>
+</table></div>
+
+<div id="panelform5"><table class="card0" width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td><center>
+<h4 id="flipform1i"><&nbspBack</h4>
+<b>These are non mandatory fields</b></center>
+<br>
+ <b><%= f.label(:if_product,"Has The Project Been Made Into A Product?") %></b>
+  <% if @project.if_product == true %>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "1", { :checked => true }%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "0" %>No</label>
+<% else %>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "1"%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "0", { :checked => true }%>No</label>
+<% end %>
+  <br><br>
+  <b><%= f.label(:product_stuff,"Any Accompanying Details?") %></b>
+ <br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:product_stuff, :size => '40x5') %>
+<br><br>
+<b><%= f.label(:if_paper,"Did The Project Publish Any Papers?") %></b>
+<% if @project.if_paper == true %>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "1", { :checked => true }%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "0" %>No</label>
+<% else %>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "1"%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "0", { :checked => true }%>No</label>
+<% end %>
+   <br><br>
+  <b><%= f.label(:paper_stuff,"Any Accompanying Details?") %></b>
+<br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:paper_stuff, :size => '40x5') %> 
+   <center><h4 id="flipform1j">next&nbsp></h4>
+</center>
+</tr></td>
+</table></div>
+
+<div id="panelform6"><table class="card0" width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td><center>
+<h4 id="flipform1k"><&nbspBack</h4>
+These are non mandatory fields</center>
+<br><br><br>
+ <b><%= f.label(:p_title,"Outcome Of The Project, If Any") %></b><br><br>
+   &nbsp&nbsp&nbsp&nbsp<%= f.text_field(:outcome) %>
+ <br><br><br>
+<b><%= f.label(:synopsis,"Synopsis :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:synopsis, :size => '40x5') %><br><br><br>
+<b><center><%= submit_tag("Submit") %></center></b><br><br>
+</tr></td>
+</table></div>
+</td>
+<td width="150"></td>
+</tr>
+ </table>
+<%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+<% end %>
+
+</div>
+</body>
+</html>
+
+
+
+
+<% else %>
+
+<% if (defined?(current_user.access_level)).nil? %>
+<center> Log in to Create a Project</center><br>
+
+<br>
+<% r=Random.new %>
+<%i=r.rand(7...12)%>
+<%puts "put"%>
+<%puts i%>
+<center><img src="/other/<%=i%>.jpg" /></center>
+<br><br>
+<center><%= link_to "Go Back To Where I Was.",:back %></center>
+
+<%else%>
+
+<center> You do not have Privilege to Create a Project</center><br>
+<center><%= link_to "Go Back",:back %></center>
+
+
+
+<% end %>
+<% end %>

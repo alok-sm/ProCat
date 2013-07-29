@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  p_title: MyText
+  p_type1: MyText
+  p_type2: MyText
+  tags: MyText
+  description: MyText
+  requirements: MyText
+  status: MyText
+  start_date: 2013-07-11
+  end_date: 2013-07-11
+  messages: MyText
+  outcome: MyText
+  url_attatched: MyText
+  if_award: false
+  award_list: MyText
+  if_patent: false
+  if_product: false
+  if_paper: false
+  department: MyText
+
+two:
+  p_title: MyText
+  p_type1: MyText
+  p_type2: MyText
+  tags: MyText
+  description: MyText
+  requirements: MyText
+  status: MyText
+  start_date: 2013-07-11
+  end_date: 2013-07-11
+  messages: MyText
+  outcome: MyText
+  url_attatched: MyText
+  if_award: false
+  award_list: MyText
+  if_patent: false
+  if_product: false
+  if_paper: false
+  department: MyText

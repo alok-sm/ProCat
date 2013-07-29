@@ -1,0 +1,976 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test2</title>
+<link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dashboard.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dept.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/home.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/projects.css?body=1" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/dashboard.js?body=1" type="text/javascript"></script>
+<script src="/assets/dept.js?body=1" type="text/javascript"></script>
+<script src="/assets/home.js?body=1" type="text/javascript"></script>
+<script src="/assets/projects.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="If+cU3KeuZl65228b3j0eb9MR/NoznyglqrwM0MDAR0=" name="csrf-token" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").fadeToggle("fast");
+    $("#panel3").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+    $("#msgpanel").fadeOut("fast");
+  });
+});
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").fadeToggle("fast");
+  });
+});
+$(document).ready(function(){
+   $("#flip2").click(function(){
+    $("#panel2").fadeToggle("fast");
+  });
+});
+$(document).ready(function(){
+   $("#flip3").click(function(){
+    $("#panel3").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+    $("#msgpanel").fadeOut("fast");
+  });
+}); 
+
+
+
+$(document).ready(function(){
+   $("#fliph1").click(function(){
+    $("#panel").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph2").click(function(){
+    $("#panel1").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph3").click(function(){
+    $("#panel2").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph4").click(function(){
+    $("#panel3").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#usr_name").click(function(){
+    $("#panel4").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel3").fadeOut("fast");
+    $("#msgpanel").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph5").click(function(){
+    $("#panel4").fadeOut("fast");
+  }); 
+});
+
+
+
+
+
+$(document).ready(function(){
+   $("#msg_button").click(function(){
+    $("#msgpanel").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel3").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph6").click(function(){
+    $("#msgpanel").fadeOut("fast");
+  }); 
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<style type="text/css">  
+
+
+
+.panels
+{
+position:absolute;
+}
+
+
+#maintable
+{
+width:1024px;
+position:relative;
+
+}
+#amk
+{
+border-radius: 10px 10px 10px 10px;
+}
+h2.a3
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 18px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 70%;
+	font-weight: normal;
+}
+h1.a4
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 30px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 50%;
+	font-weight: normal;
+}
+body 
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 200;
+	color: #000000;
+	
+}
+
+
+#menu
+{
+	overflow: hidden;
+	width: 1024px;
+	padding: 0px 0px;
+	margin: 0px auto 5px auto;
+	background:#555555;
+	border-radius: 0px 0px 13px 13px;
+	font-size: 20px;
+	color: white;
+}
+#menu a
+{
+	display: inline-block;
+	padding: 15px 40px 15px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 200;
+	color: white;
+	border: none;
+}
+
+
+
+#menu div
+{
+display: inline-block;
+list-style: none;
+line-height: normal;
+}
+
+#menu a:hover
+ {
+	text-decoration: none;
+        
+}
+ #menu #flip a {
+	text-decoration: none;
+	background:#737373;
+	color: white;
+	text-align:left;
+}
+
+#menu .last {
+margin-left:-70%;
+margin-right:-360%;
+}
+
+#flip
+{
+
+border:solid 2px #c3c3c3;
+
+}
+#panel,#panel1,#panel2,#panel3, #panel4, #msgpanel
+{
+font-color: white;
+padding:5px;
+text-align:center;
+background-color: #555555;
+border:solid 2px #c3c3c3;
+border-radius: 0px 0px 10px 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+<% if user_signed_in? %>
+
+
+
+
+#panel
+{
+margin-top:0%;
+margin-right:-100%;
+z-index:2;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel1
+{
+margin-top:0%;
+margin-right:-70%;
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel2
+{
+margin-top:0%;
+margin-right:-70%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel3
+{
+margin-top:0%;
+margin-right:-620%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel4
+{
+
+margin-top:0%;
+margin-right:-430%;
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#msgpanel
+{
+max-height:500px;
+overflow:auto;
+overflow-x:hidden;
+margin-top:0%;
+margin-right:-205%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+
+
+
+<% else %>
+
+
+
+
+#panel
+{
+margin-top:0%;
+margin-right:-135%;
+z-index:2;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel1
+{
+margin-top:0%;
+margin-right:-70%;
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel2
+{
+margin-top:0%;
+margin-right:-70%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel3
+{
+margin-top:0%;
+margin-right:-620%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel4
+{
+
+margin-top:0%;
+margin-right:-500%;
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+
+
+<% end %>
+
+
+
+.menu_buttons
+{
+text-align:center;
+}
+
+.sign_out
+{
+color:white;
+text-decoration:none;
+}
+
+</style>
+<body bgcolor="#DFDFDF">
+</head>
+<body>
+
+
+
+
+
+<center>
+<div id="maintable">
+
+
+
+
+<div class="panels">
+
+<table width="250" id="panel" >
+<tr><td width="250" >
+<font color="white">
+<h4><div id="fliph1">&nbsp<&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDEPARTMENTS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div></h4><hr>
+<h4><div id="flip1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBE    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp></div></h4><hr>
+<h4><div id="flip2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspM.Tech&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp>
+</div></h4><hr>
+
+<h4><a href="/dept/bca" style="text-decoration:none;"><font color="white">BCA</font></a></h4><hr>
+
+<h4><a href="/dept/mca" style="text-decoration:none;"><font color="white">MCA</font></a></h4><hr>
+
+<h4><a href="/dept/mba" style="text-decoration:none;"><font color="white">MBA</font></a></h4>
+
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="350"  id="panel1" >
+<tr><td width="350">
+<font color="white">
+<h4 id="fliph2"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspB.E
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4><a href="/dept/bt" style="text-decoration:none;"><font color="white">Bio Technology</font></a></h4><hr>
+
+<h4><a href="/dept/cv" style="text-decoration:none;"><font color="white">Civil</font></a></h4><hr>
+
+<h4><a href="/dept/cs" style="text-decoration:none;"><font color="white">Computer Science</font></a></h4><hr>
+
+<h4><a href="/dept/ec" style="text-decoration:none;"><font color="white">Electronics and Communication</font></a></h4><hr>
+
+<h4><a href="/dept/ee" style="text-decoration:none;"><font color="white">Electricals and Electronics</font></a></h4><hr>
+
+<h4><a href="/dept/is" style="text-decoration:none;"><font color="white">Information Science</font></a></h4><hr>
+
+<h4><a href="/dept/me" style="text-decoration:none;"><font color="white">Mechanical</font></a></h4><hr>
+
+<h4><a href="/dept/tc" style="text-decoration:none;"><font color="white">Telecommunication</font></a></h4>
+</font></td></tr>
+</table>
+</div>
+
+<div class="panels">
+<table width="350"  id="panel2" >
+<tr><td width="350">
+
+<font color="white">
+<h4 id="fliph3"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspM.Tech
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+
+<h4><a href="/dept/mcs" style="text-decoration:none;"><font color="white">Computer Science and Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mec" style="text-decoration:none;"><font color="white">Electronics and Communication Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mme" style="text-decoration:none;"><font color="white">Mechanical Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mse" style="text-decoration:none;"><font color="white">Software Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mwt" style="text-decoration:none;"><font color="white">Web Technologies</font></a></h4>
+
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="250"  id="panel3" >
+<tr><td width="250">
+<font color="white">
+<h4 id="fliph4"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMORE
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4>About</h4><hr>
+<h4><a href="http://pesit.pes.edu/contact-address" style="text-decoration:none;"><font color="white">Contact Us</font></a></h4><hr>
+<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4>
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="250"  id="panel4" >
+<tr><td width="250">
+<font color="white">
+
+<h4 id="fliph5"><% if user_signed_in? %><&nbsp&nbsp<%=current_user.username%>&nbsp<% end %>
+</h4><hr>
+
+<h4><a href="#" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
+<h4><a href="/users/edit" style="text-decoration:none;"><font color="white">Edit Profile</font></a></h4><hr>
+<h4><font color="white"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>'sign_out'%></font></h4>
+</font></td></tr>
+</table>
+</div>
+
+
+
+
+<% if user_signed_in? and @all.include?(current_user.code) %>
+<div class="panels" >
+<div id="msgpanel" style="width:500px;">
+<table width="500" max-height="500" >
+<tr><td width="500" max-height="500" >
+<font color="white">
+
+<h4 id="fliph6">MESSAGES</h4><hr>
+
+
+
+
+
+<%msg=@project.messages.to_s.split("%d%") %>
+ <%msg.each{ |each_msg|%> 
+
+
+<%stuff=each_msg.split("%n%")%>
+
+
+
+
+<div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:440px;">
+
+<p><font color="black"><%=stuff.second%></font><font color="#555555"><%=stuff.third%></font></p></div>
+
+<br>
+<%}%>
+<%= form_for(:project) do |f| %>
+
+ <h4>Add a new Message:</h4>
+   <%= f.text_field(:url_attatched, :size => '40x5', :autocomplete => :off) %>
+<%= f.submit "Submit" %>
+<% end %>
+
+
+
+
+
+</font></td></tr>
+</table>
+</div>
+</div>
+
+<% end %>
+
+
+
+
+<% if user_signed_in? and @all.include?(current_user.code) %>
+
+
+<table id="menu" valign="top">
+	<tr>
+			
+
+		<td width="170" class="menu_buttons">
+			<a href="/dashboard"id="home_button">home</a>	
+		</td >
+
+		<td width="170" class="menu_buttons">
+			<a href="#" id="flip">Department</a>	
+		</td>
+                <td width="170" class="menu_buttons">
+			<a href="/projects" id="search">Search</a>	
+		</td>
+			<% if user_signed_in? %>
+				<td width="310" class="menu_buttons" style="font-size:17px;font-color:white;" id=usr_name >
+					<%=current_user.username.upcase%>	
+				</td>
+			<%else%>
+
+				<td width="310" class="menu_buttons" style="font-size:17px;font-color:white;">
+					<a href="/users/sign_in" id="login">Login/Signup</a>
+				</td>
+			<%end%>
+
+
+		<td width="100" class="menu_buttons">
+			<span style="cursor:pointer; font-size:17px;" id="msg_button">MESSAGES</span>	
+		</td >
+
+
+
+		<td class="last" id="flip3" width="100" class="menu_buttons">
+			<a href="#">More</a>	
+		</td>
+	</tr>
+</table>
+
+
+
+
+
+<% else %>
+
+
+
+
+
+<table id="menu" valign="top">
+	<tr>
+			
+
+		<td width="200" class="menu_buttons">
+			<a href="/dashboard"id="home_button">home</a>	
+		</td >
+
+		<td width="200" class="menu_buttons">
+			<a href="#" id="flip">Department</a>	
+		</td>
+                <td width="200" class="menu_buttons">
+			<a href="/projects" id="search">Search</a>	
+		</td>
+			<% if user_signed_in? %>
+				<td width="324" class="menu_buttons" style="font-size:17px;font-color:white;" id=usr_name >
+					<%=current_user.username.upcase%>	
+				</td>
+			<%else%>
+
+				<td width="324" class="menu_buttons" style="font-size:17px;font-color:white;">
+					<a href="/users/sign_in" id="login">Login/Signup</a>
+				</td>
+			<%end%>
+
+		<td class="last" id="flip3" width="100" class="menu_buttons">
+			<a href="#">More</a>	
+		</td>
+	</tr>
+</table>
+
+
+
+
+<%end%>
+
+
+
+
+<table border="0" id="amk" align="center" bgcolor="white" width="1024" cellspacing="4" summary="Project Form Fields" >
+<tr>
+
+<td width="1024"  valign="top">
+
+<center>
+<br>
+<div class="card0" style="width:800px;padding:7px;">
+<center><strong>Project Title: </strong> <%= @project.p_title %><br></center></div>
+<div class="card0" style="width:800px;padding:7px;">
+
+ <p><strong>Departments Under Which The Project Has Been Filed:<br></strong>
+<% if @project.if_bt == true %>BE-Biotechnology<br><% end %>
+
+<% if @project.if_cv == true %>BE-Civil<br><% end %>
+
+<% if @project.if_cs == true %>BE-Computer Science<br><% end %>
+
+<% if @project.if_ee == true %>BE-Electrical And Electronics<br><% end %>
+
+<% if @project.if_ec == true %>BE-Electronics And Communications<br><% end %>
+
+<% if @project.if_is == true %>BE-Information Science<br><% end %>
+
+<% if @project.if_me == true %>BE-Mechanical<br><% end %>
+
+<% if @project.if_tc == true %>BE-Telecommunications<br><% end %>
+
+<% if @project.if_bca == true %>BCA<br><% end %>
+
+<% if @project.if_mba == true %>MBA<br><% end %>
+
+<% if @project.if_mca == true %>MCA<br><% end %>
+
+<% if @project.if_mcs == true %>MTech-Computer Science<br><% end %>
+
+<% if @project.if_mec == true %>MTech-Electronics And Communications<br><% end %>
+
+<% if @project.if_mme == true %>MTech-Mechanical<br><% end %>
+
+<% if @project.if_mse == true %>MTech-Software Engineering<br><% end %>
+
+<% if @project.if_mwt == true %>MTech-Web Technologies<br><% end %>
+</div>
+
+
+<div class="card0" style="width:800px;padding:7px;">
+<strong>Tags :</strong> <%= @project.tags %><br></div>
+<div class="card0" style="width:800px;padding:7px;">
+<strong>Objective:<br> </strong> <%= @project.objective %><br></div>
+<div class="card0" style="width:800px;padding:7px;">
+<strong>Synopsis:<br> </strong> <%= @project.synopsis %><br></div>
+<div class="card0" style="width:800px;padding:7px;">
+<strong>Project Description:<br></strong> <%= @project.description %></div>
+<div class="card0" style="width:800px;padding:7px;">
+<strong>Project Type :</strong> <%= @project.p_type1 %></div>
+<div class="card0" style="width:800px;padding:7px;">
+<strong>Project Impact Type :</strong> <%= @project.p_type2 %></div>
+<div class="card0" style="width:800px;padding:7px;">
+<strong>Status :</strong>
+<% if @project.status == "o" %>Open<% end %>
+<% if @project.status == "c" %>Closed<% end %>
+<% if @project.status == "p" %>Past<% end %>
+</div>
+<div class="card0" style="width:800px;padding:7px;">
+<strong>Requirements :<br></strong> <%= @project.requirements %></div>
+<div class="card0" style="width:800px;padding:7px;">
+<strong>Period Of Working :</strong> <%= @project.start_date %> To <%= @project.end_date %></div>
+<div class="card0" style="width:800px;padding:7px;">
+<strong>Outcome :<br></strong> <%= @project.outcome %></div>
+
+
+
+<% if @project.if_award == true %>
+<div class="card0" style="width:800px;padding:7px;">
+The Project Has Won Awards<br><br>
+Details:<br><%= @project.award_list %>
+</div><% end %>
+
+<% if @project.if_patent == true %>
+<div class="card0" style="width:800px;padding:7px;">
+The Project Has Been Patented<br><br>
+Details:<br><%= @project.patent_stuff %></div><% end %>
+
+<% if @project.if_product == true %>
+<div class="card0" style="width:800px;padding:7px;">
+The Project Has Been Made Into A Product<br><br>
+Details:<br><%= @project.product_stuff %></div><% end %>
+
+<% if @project.if_paper == true %>
+<div class="card0" style="width:800px;padding:7px;">
+The Project Has Published A Paper<br><br>
+Details:<br><%= @project.paper_stuff %></div><% end %>
+</center>
+
+
+
+
+
+
+
+
+
+
+<center>
+<div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:770px;">
+<b>People working on this project:</b><br><br>
+<% ar=@project.department.to_s.split(";") %>
+<% @users = User.where(:code => ar) %>
+
+<% @users.each do |c| %>
+
+<div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
+
+
+
+
+
+<center>
+
+<b><%=c.username %></b><br>
+<hr width="400" size="3" color="#AAAAAA">
+<% if c.linkedin!=nil%><a href="<%= c.linkedin %>">LinkedIn profile</a><br><%end%>
+<% if c.contact.blank?%><%else%><b>Phone: </b><%= c.contact %><br><%end%>
+<% if c.contact.blank?%><%else%><b>Email: </b>
+<a href="mailto:<%= c.email %>" target="_top"><%= c.email %></a><br><%end%>
+<% if c.projects.to_s.count(";").to_i > 1 %>
+<%= link_to "More projects by #{c.username}", {:controller => 'view', :action => 'show', :id => c.id} -%><br>
+<% end %>
+</center>
+</div>
+<% end %>
+</div>
+</center>
+
+
+
+<br>
+
+
+
+
+
+
+ 
+
+<center>
+<div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:770px;">
+<b>Guides:</b><br><br>
+<% ar=@project.guides.to_s.split(";") %>
+<% @users = User.where(:code => ar) %>
+
+<% @users.each do |c| %>
+
+<div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
+
+<center>
+
+<b><%=c.username %></b>
+<hr width="400" size="3" color="#AAAAAA">
+<% if c.linkedin!=nil%><a href="<%= c.linkedin %>">LinkedIn profile</a><br><%end%>
+<% if c.contact.blank?%><%else%><b>Phone: </b><%= c.contact %><br><%end%>
+<% if c.contact.blank?%><%else%><b>Email: </b>
+<a href="mailto:<%= c.email %>" target="_top"><%= c.email %></a><br><%end%>
+<% if c.projects.to_s.count(";").to_i > 1 %>
+<%= link_to "More projects by #{c.username}", {:controller => 'view', :action => 'show', :id => c.id} -%><br>
+<% end %>
+</center>
+</div>
+<% end %>
+</div>
+</center>
+
+
+
+<br>
+
+
+
+
+
+<center>
+<div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:770px;">
+<b>Attached files:</b><br>
+<font size="2">right-click and "save link" to download the files.</font><br><br>
+
+<% @uploads = Upload.where(:project => @project.id ) %>
+
+
+
+<% user=3; %>
+
+<% if user_signed_in? %>
+
+<% user=current_user.access_level %>
+
+<% if @all.include?(current_user.code) %>
+<% user=0 %>
+<% end %>
+
+<% end %>
+
+<% @uploads.each do |c| %>
+
+
+<% if user< c.permission %>
+<div class="card0" style="background-color:#EFEFEF;width:500px;padding:5px;">
+
+
+<a href = "<%= c.url %>"><%= c.file_file_name %></a>
+<% if @all.include?(current_user.code) or @all1.include?(current_user.code) %>
+<span align="right" style="float:right;" ><%= link_to "Delete", c, class: "destroy", :method => :delete %></span>
+<% end %>
+
+</div>
+<% end %>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+<% if user_signed_in? %>
+<% @all1 = @project.guides.split(";") %>
+<% if @all.include?(current_user.code) or @all1.include?(current_user.code) %>
+<div class="card0" style="background-color:#EFEFEF;width:500px;padding:5px;">
+<%=form_for @upload,  :html=>{ :multipart => true} do |f| %>
+
+<center><b>Upload new files</b></center><br>
+
+
+
+<center>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%=f.file_field :file %></center><br>
+
+<center>Who can View this File?<br>
+<%= f.radio_button :permission, "1"%>project members
+<%= f.radio_button :permission, "2"%> + teachers
+<%= f.radio_button :permission, "3"%> + other students
+<%= f.radio_button :permission, "4", { :checked => true }%>everyone</center><br>
+
+<div style="display:none;">
+<%=f.text_field :project , :value => @project.id %>
+</div>
+
+<center><%= f.submit "Upload" %></center>
+<% end %>
+</div>
+<% end %>
+<% end %>
+
+</div>
+</center>
+
+
+
+
+<br>
+
+
+<% if user_signed_in? %>
+<% @all1 = @project.guides.split(";") %>
+<% if @all.include?(current_user.code) or @all1.include?(current_user.code) %>
+<center>
+<a href="/projects/<%= @project.id%>/edit">
+<div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:770px;">
+
+
+
+Edit This Project
+
+
+
+</div>
+</a>
+</center>
+<% end %>
+<% end %>
+<br>
+
+
+</td>
+
+
+
+
+</tr>
+ </table>   
+ <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+
+
+
+
+
+
+</div>
+</center>
+</body>
+</html>
+
+
+
+
+
+

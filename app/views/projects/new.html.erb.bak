@@ -1,0 +1,19 @@
+enter the info
+<hr>
+
+<%= form_for @project do |f| %>
+	p_type1<%= f.text_area :p_type1 %><br />
+	<%= f.text_field :p_type2 %>
+
+<%= f.radio_button :if_patent, "0"%>false<br>
+<%= f.radio_button :if_patent, "1" %>true
+ 
+<br>
+enter date
+<br>
+<%= f.date_select :start_date, :order => [:day, :month, :year] %>
+
+
+	<%= f.submit "submit" %>
+<% end %>
+

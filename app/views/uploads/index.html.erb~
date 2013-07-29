@@ -1,0 +1,5 @@
+<% title "uploads" %>
+
+
+
+<p><%= link_to "New upload", new_upload_path %></p>

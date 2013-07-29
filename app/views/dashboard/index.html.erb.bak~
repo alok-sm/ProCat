@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test2</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="color:black;font-family:Arial">
+
+<div id="user_nav">
+  <% if user_signed_in? %>
+   
+   
+  
+  
+</div>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+Project_Portal
+</title></head>
+
+<body>
+<table align="center" cellspacing="0" width="1024"  border="5">
+  <tr>
+    <td height="28" colspan="3" valign="top" bgcolor="#D6D6D6"  style="background-color:#ADC2FF"><h1><img src="http://indiacollegeinfo.com/templates/uploads/college/logo/pes.png" width="28" height="28">     <font color="#000080"> PROJECT PORTAL</font></h1>
+    <pre><h3  align="right";valign="top"><a href="http://www.google.com">Search</a></h3><h3 align="right";valign="top"><%= link_to current_user.username, "/users/edit" %>     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %><br></h3></pre></td>
+  </tr>
+  <tr>
+  <td width="512" height="450"  valign="top" colspan="2">
+  <h3>DEPARTMENTS :</h3>
+  <ul>
+ <li>BE  
+  </li><ul>  
+<li><a href="/dept/bt">Biotechnology</a></li>
+<li><a href="/dept/cv">Civil</a></li>
+<li><a href="/dept/cs">Computer Science</a></li>
+<li><a href="/dept/ee">Electrical and Electronics</a></li>
+<li><a href="/dept/ec">Electronics and Communication</a></li>
+<li><a href="/dept/is">Information Science</a></li>
+<li><a href="/dept/me">Mechanical</a></li>
+<li><a href="/dept/tc">Telecomminucation</a></li>
+</ul>
+<li><a href="/dept/bca">BCA</a></li>
+<li><a href="/dept/mba">MBA</a></li>
+<li><a href="/dept/mca">MCA</a></li><li>M-Tech</li>
+<ul>
+<li><a href="/dept/mcs">Computer Science and Engineering</a></li>
+<li><a href="/dept/mec">Electronics and Communication Engineering</a></li>
+<li><a href="/dept/mme">Mechanical Engineering</a></li>
+<li><a href="/dept/mse">Software Engineering</a></li>
+<li><a href="/dept/mwt">Web Technologies</a></li></ul>
+  </ul>
+  </td>
+  <td width="512" height="450" valign="top" align="center">
+  <h3>Your Projects : </h3>
+  
+<tr >
+  <td width="342" height="200">
+<pre>     <center><img src="http://2.bp.blogspot.com/_gAL4GZ2xQtU/TNg28-4Y2gI/AAAAAAAACpo/T5H0VE2JDZQ/s1600/PESIT+logo.jpg" width="190" height="190" valign="top"></center></pre></td>
+<td width="682" height="200" valign="top" colspan="2">
+<br>
+<pre>   <b> About PESIT :</b>
+ </pre></td>
+</tr>
+</table>
+<% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
+<% end %>
+
+</body>
+</html>
+
+ 
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test2</title>
+  <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dashboard.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dept.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/home.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/projects.css?body=1" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/dashboard.js?body=1" type="text/javascript"></script>
+<script src="/assets/dept.js?body=1" type="text/javascript"></script>
+<script src="/assets/home.js?body=1" type="text/javascript"></script>
+<script src="/assets/projects.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="If+cU3KeuZl65228b3j0eb9MR/NoznyglqrwM0MDAR0=" name="csrf-token" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").fadeToggle("fast");
+    $("#panel3").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+  });
+});
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").fadeToggle("fast");
+  });
+});
+$(document).ready(function(){
+   $("#flip2").click(function(){
+    $("#panel2").fadeToggle("fast");
+  });
+});
+$(document).ready(function(){
+   $("#flip3").click(function(){
+    $("#panel3").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+  });
+}); 
+
+
+
+$(document).ready(function(){
+   $("#fliph1").click(function(){
+    $("#panel").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph2").click(function(){
+    $("#panel1").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph3").click(function(){
+    $("#panel2").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph4").click(function(){
+    $("#panel3").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#usr_name").click(function(){
+    $("#panel4").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel3").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph5").click(function(){
+    $("#panel4").fadeOut("fast");
+  }); 
+});
+
+</script>
+
+<style type="text/css">  
+
+
+
+.panels
+{
+position:absolute;
+}
+
+
+#maintable
+{
+width:1024px;
+position:relative;
+
+}
+#content
+{
+
+}
+#amk
+{
+border-radius: 10px 10px 10px 10px;
+width:600px;
+height:600px;
+}
+h2.a3
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 18px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 70%;
+	font-weight: normal;
+}
+h1.a4
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 30px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 50%;
+	font-weight: normal;
+}
+body 
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 200;
+	color: #000000;
+	
+}
+
+
+#menu
+{
+	overflow: hidden;
+	width: 1024px;
+	padding: 0px 0px;
+	margin: 0px auto 10px auto;
+	background:#555555;
+	border-radius: 0px 0px 13px 13px;
+	font-size: 20px;
+	color: white;
+}
+#menu a,#menu span
+{
+	display: inline-block;
+	padding: 15px 40px 15px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 200;
+	color: white;
+	border: none;
+}
+
+
+
+#menu div
+{
+display: inline-block;
+list-style: none;
+line-height: normal;
+}
+
+#menu a:hover
+ {
+	text-decoration: none;
+        
+}
+ #menu #flip a {
+	text-decoration: none;
+	background:#737373;
+	color: white;
+	text-align:left;
+}
+
+#menu .last {
+margin-left:-70%;
+margin-right:-360%;
+}
+#flip
+{
+
+border:solid 2px #c3c3c3;
+
+}
+#panel,#panel1,#panel2,#panel3, #panel4
+{
+font-color: white;
+padding:5px;
+text-align:center;
+background-color: #555555;
+border:solid 2px #c3c3c3;
+border-radius: 0px 0px 10px 10px;
+box-shadow: 0px 0px 7px 3px #555555;
+}
+#panel
+{
+margin-top:-267%;
+margin-right:-135%;
+z-index:2;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel1
+{
+margin-top:-192%;
+margin-right:-70%;
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel2
+{
+margin-top:-192%;
+margin-right:-70%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel3
+{
+margin-top:-267%;
+margin-right:-620%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel4
+{
+
+margin-top:-267%;
+margin-right:-500%;
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+.menu_buttons
+{
+text-align:center;
+}
+.sign_out
+{
+color:white;
+text-decoration:none;
+}
+
+</style>
+<body bgcolor="#DFDFDF">
+</head>
+<body>
+
+
+
+
+
+<center>
+<div id="maintable">
+
+
+<table id="menu" valign="top">
+	<tr>
+			
+
+		<td width="200" class="menu_buttons">
+			<a href="/dashboard"id="home_button">home</a>	
+		</td >
+
+		<td width="200" class="menu_buttons">
+			<span id="flip" style="cursor:pointer;">Department</span>	
+		</td>
+                <td width="200" class="menu_buttons">
+			<a href="/projects" id="search">Search</a>	
+		</td>
+			<% if user_signed_in? %>
+				<td width="324" class="menu_buttons" style="font-size:17px;font-color:white;" id=usr_name >
+					<%=current_user.username.upcase%>	
+				</td>
+			<%else%>
+
+				<td width="324" class="menu_buttons" style="font-size:17px;font-color:white;">
+					<a href="/users/sign_in" id="login">Login/Signup</a>
+				</td>
+			<%end%>
+
+		<td class="last" id="flip3" width="100" class="menu_buttons">
+			<span style="cursor:pointer;">More</span>	
+		</td>
+	</tr>
+</table>
+
+
+
+<table border="0" id="content" align="center" width="1024" cellspacing="4">
+<tr>
+
+<td width="1022" id="amk" height="600" align="center"bgcolor="white" valign="top">
+<center>
+<h3>About Us</h3>
+<br><br>
+<h4>ALOK SHANKAR<h4><br>
+<img src="projects/images/alok.jpg" height="300" width="300"><br>
+Email Id :alok.shankar.m@gmail.com<br>
+<br><br>
+<h4>AKSHAY R DESHPANDE<br>
+<img src="projects/images/akshay.jpg" height="300" width="300"><br>
+Email Id :jetleerd@gmail.com<br>
+<br><br>
+<h4>ABHINAV M KULKARNI<br>
+<img src="projects/images/abhinav.jpg" height="300" width="300"><br>
+Email Id :abhinavmkulkarni@gmail.com<br>
+<br><br>
+</center>
+</td>
+</tr>
+</table>
+
+
+
+<div class="panels">
+
+<table width="250" id="panel" >
+<tr><td width="250" >
+<font color="white">
+<h4><div id="fliph1">&nbsp<&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDEPARTMENTS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4><div id="flip1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBE    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp></h4><hr>
+<h4><div id="flip2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspM.Tech&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp></h4><hr>
+
+<h4><a href="/dept/bca" style="text-decoration:none;"><font color="white">BCA</font></a></h4><hr>
+
+<h4><a href="/dept/mca" style="text-decoration:none;"><font color="white">MCA</font></a></h4><hr>
+
+<h4><a href="/dept/mba" style="text-decoration:none;"><font color="white">MBA</font></a></h4>
+
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="350"  id="panel1" >
+<tr><td width="350">
+<font color="white">
+<h4 id="fliph2"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspB.E
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4><a href="/dept/bt" style="text-decoration:none;"><font color="white">Bio Technology</font></a></h4><hr>
+
+<h4><a href="/dept/cv" style="text-decoration:none;"><font color="white">Civil</font></a></h4><hr>
+
+<h4><a href="/dept/cs" style="text-decoration:none;"><font color="white">Computer Science</font></a></h4><hr>
+
+<h4><a href="/dept/ec" style="text-decoration:none;"><font color="white">Electronics and Communication</font></a></h4><hr>
+
+<h4><a href="/dept/ee" style="text-decoration:none;"><font color="white">Electricals and Electronics</font></a></h4><hr>
+
+<h4><a href="/dept/is" style="text-decoration:none;"><font color="white">Information Science</font></a></h4><hr>
+
+<h4><a href="/dept/me" style="text-decoration:none;"><font color="white">Mechanical</font></a></h4><hr>
+
+<h4><a href="/dept/tc" style="text-decoration:none;"><font color="white">Telecommunication</font></a></h4>
+</font></td></tr>
+</table>
+</div>
+
+<div class="panels">
+<table width="350"  id="panel2" >
+<tr><td width="350">
+
+<font color="white">
+<h4 id="fliph3"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspM.Tech
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+
+<h4><a href="/dept/mcs" style="text-decoration:none;"><font color="white">Computer Science and Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mec" style="text-decoration:none;"><font color="white">Electronics and Communication Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mme" style="text-decoration:none;"><font color="white">Mechanical Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mse" style="text-decoration:none;"><font color="white">Software Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mwt" style="text-decoration:none;"><font color="white">Web Technologies</font></a></h4>
+
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="250"  id="panel3" >
+<tr><td width="250">
+<font color="white">
+<h4 id="fliph4"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMORE
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4>About</h4><hr>
+<h4><a href="http://pesit.pes.edu/contact-address" style="text-decoration:none;"><font color="white">Contact Us</font></a></h4><hr>
+<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4>
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="250"  id="panel4" >
+<tr><td width="250">
+<font color="white">
+
+<h4 id="fliph5"><% if user_signed_in? %><&nbsp&nbsp<%=current_user.username%>&nbsp<% end %>
+</h4><hr>
+
+<h4><a href="#" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
+<h4><a href="/users/edit" style="text-decoration:none;"><font color="white">Edit Profile</font></a></h4><hr>
+<h4><font color="white"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>'sign_out'%></font></h4>
+</font></td></tr>
+</table>
+</div>
+
+
+
+
+
+
+</div>
+</center>
+</body>
+</html>
+
+
+
+
+
+
