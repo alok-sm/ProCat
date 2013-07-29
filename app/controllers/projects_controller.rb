@@ -57,6 +57,12 @@ if(@project.url_attatched.blank? == false)
 def index
   @search = Project.search(params[:q])
   @project = @search.result
+@no=@project.size
+@no1=0
+if(@no>10)
+@no1=10
+end
+@project = @project.page(params[:page]).per(@no1)
   @search.build_condition if @search.conditions.empty?
   @search.build_sort if @search.sorts.empty?
    end
