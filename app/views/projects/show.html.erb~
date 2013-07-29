@@ -854,7 +854,7 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <% user=3; %>
 
 <% if user_signed_in? %>
-
+<% @all1 = @project.guides.split(";") %>
 <% user=current_user.access_level %>
 
 <% if @all.include?(current_user.code) %>

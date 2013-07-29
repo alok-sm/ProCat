@@ -847,7 +847,7 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <b>Attached files:</b><br>
 <font size="2">right-click and "save link" to download the files.</font><br><br>
 
-<% @uploads = Upload.where(:project => @project.id ) %>
+<% @uploads = Upload.where(:project => @project.id.to_s ) %>
 
 
 
