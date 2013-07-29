@@ -8,8 +8,9 @@ def create
 	
 	@project = Project.new(params[:project])
 
-	@project.save
-
+	if @project.save
+	redirect_to "/"
+	end
 		
 	
 
@@ -30,7 +31,7 @@ def create
 	c.projects = "#{c.projects};#{@project.id}"
 	c.save
 
-	redirect_to "/"
+	
 
 	
 	end
