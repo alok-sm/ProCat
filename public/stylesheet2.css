@@ -1,0 +1,187 @@
+.panels
+{
+z-index:10;
+position:fixed;
+}
+
+
+#maintable
+{
+width:1024px;
+position:relative;
+
+}
+#content
+{
+
+}
+#amk
+{
+border-radius: 10px 10px 10px 10px;
+width:600px;
+height:600px;
+}
+h2.a3
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 18px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 70%;
+	font-weight: normal;
+}
+h1.a4
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 30px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 50%;
+	font-weight: normal;
+}
+body 
+{
+	margin: 0;
+	padding: 0;
+	
+	font-size: 16px;
+	
+	color: #000000;
+	
+}
+
+
+#menu
+{
+	position:fixed;
+	z-index:8;
+	overflow: hidden;
+	width: 1024px;
+	padding: 0px 0px;
+	margin: 0px auto 0px auto;
+	background:#555555;
+	border-radius: 0px 0px 13px 13px;
+	font-size: 20px;
+	color: white;
+}
+#menu a,#menu span
+{
+	display: inline-block;
+	padding: 15px 40px 15px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 200;
+	color: white;
+	border: none;
+}
+
+
+
+#menu div
+{
+display: inline-block;
+list-style: none;
+line-height: normal;
+}
+
+#menu a:hover
+ {
+	text-decoration: none;
+        
+}
+ #menu #flip a {
+	text-decoration: none;
+	background:#737373;
+	color: white;
+	text-align:left;
+}
+
+#menu .last {
+margin-left:-70%;
+margin-right:-360%;
+}
+#flip
+{
+
+border:solid 2px #c3c3c3;
+
+}
+#panel,#panel1,#panel2,#panel3, #panel4
+{
+font-color: white;
+padding:5px;
+text-align:center;
+background-color: #555555;
+border:solid 2px #c3c3c3;
+border-radius: 0px 0px 10px 10px;
+box-shadow: 0px 0px 7px 3px #555555;
+}
+#panel
+{
+margin-top:0%;
+margin-right:-125%;
+z-index:2;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel1
+{
+margin-top:0%;
+margin-right:-70%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel2
+{
+margin-top:-0%;
+margin-right:-70%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel3
+{
+margin-top:-0%;
+margin-right:-620%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+#panel4
+{
+
+margin-top:-0%;
+margin-right:-500%;
+padding:2px;
+display:none;
+opacity:1;
+
+}
+
+.menu_buttons
+{
+text-align:center;
+}
+.sign_out
+{
+color:white;
+text-decoration:none;
+}

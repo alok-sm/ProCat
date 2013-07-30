@@ -1,4 +1,4 @@
-<% if user_signed_in? and @c==true %>
+<% if user_signed_in? and current_user.access_level != 3 %>
 
 
 <!DOCTYPE html>
@@ -574,13 +574,43 @@ text-decoration:none;
 <font color="white">
 <h4 id="fliph4"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMORE
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
-<h4>About</h4><hr>
+
 <h4><a href="http://pesit.pes.edu/contact-address" style="text-decoration:none;"><font color="white">Contact Us</font></a></h4><hr>
-<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4>
+<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4><hr>
+<b>Created By</b><br><br>
+
+<div><img src="/img/alok.png" height="50"width="50"   style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+<span style="margin-right:3px;">Alok Shankar M</span><br>
+<a href="http://in.linkedin.com/pub/alok-shankar/75/731/a15"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:alok.shankar.m@gmail.com"><font color="white">Email</font></a></div></div><br>
+
+
+<div><img src="/img/abhinav.png" height="50"width="50"  style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+Abhinav M Kulkarni<br>
+<a href="http://in.linkedin.com/pub/abhinav-kulkarni/5b/126/222"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:abhinavmkulkarni@gmail.com"><font color="white">Email</font></a></div></div><br>
+
+<div><img src="/img/akshay.png" height="50"width="50"  style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+Akshay R Deshpande<br>
+<a href="http://in.linkedin.com/pub/akshay-r-d/78/2a9/88a/"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:jetleerd@gmail.com"><font color="white">Email</font></a></div></div><hr>
+
+
+<b>Under the Guidance Of</b><br><br>
+<div><img src="/img/hod.png" height="50"width="50"  style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+Shylaja S Sharath<br>
+<a href="http://in.linkedin.com/pub/shylaja-s-s/1b/409/49b"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:shylaja.sharath@pes.edu"><font color="white">Email</font></a></div></div>
+
+
+
 </font></td></tr>
 </table>
 </div>
-
 
 <div class="panels">
 <table width="250"  id="panel4" >
@@ -590,7 +620,7 @@ text-decoration:none;
 <h4 id="fliph5"><% if user_signed_in? %><&nbsp&nbsp<%=current_user.username%>&nbsp<% end %>
 </h4><hr>
 
-<h4><a href="#" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
+<h4><a href="<%= current_user.linkedin %>" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
 <h4><a href="/users/edit" style="text-decoration:none;"><font color="white">Edit Profile</font></a></h4><hr>
 <h4><font color="white"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>'sign_out'%></font></h4>
 </font></td></tr>
@@ -913,20 +943,22 @@ These are non mandatory fields</center>
 
 <% else %>
 
-<% if @d== false %>
-<center>You need to be a member of the project to edit it.</center><br>
+<% if (defined?(current_user.access_level)).nil? %>
+<center> Log in to Create a Project</center><br>
 
 <br>
 <% r=Random.new %>
-<%i=r.rand(1...6)%>
+<%i=r.rand(7...12)%>
+<%puts "put"%>
+<%puts i%>
 <center><img src="/other/<%=i%>.jpg" /></center>
 <br><br>
 <center><%= link_to "Go Back To Where I Was.",:back %></center>
 
 <%else%>
 
-<center><a href="/">Sign Up</a> to edit this project or 
-<%= link_to "Go Back",:back %></center>
+<center> You do not have Privilege to Create a Project</center><br>
+<center><%= link_to "Go Back",:back %></center>
 
 
 

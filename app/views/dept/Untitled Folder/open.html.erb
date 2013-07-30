@@ -1,0 +1,9 @@
+<center><h1>Department-</h1></center><br>
+<p>These Are The Open Projects</p>
+<ul id="projects">
+<% @project.each do |c| %>
+<li><%= link_to c.p_title, {:action => 'show', :id => c.id} -%></li>
+<% end %>
+</ul>
+
+

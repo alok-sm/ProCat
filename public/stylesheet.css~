@@ -37,7 +37,7 @@ margin-right:13px;
 }
 body
 {
-font-family:Arial;
+font-family:Garamond;
 }
 
 .cardx
@@ -53,6 +53,19 @@ margin-bottom:20px;
  #menu, #amk
 {
 box-shadow:0px 0px 8px 0px #555555;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url('/roboto/Roboto-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: "robotot";
+    src: url('/roboto/RobotoCondensed-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 

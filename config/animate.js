@@ -1,0 +1,44 @@
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").fadeToggle("fast");
+    $("#panel3").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+  });
+  $("#flip1").click(function(){
+    $("#panel1").fadeToggle("fast");
+  });
+
+   $("#flip2").click(function(){
+    $("#panel2").fadeToggle("fast");
+  });
+   $("#flip3").click(function(){
+    $("#panel3").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+  });
+   $("#fliph1").click(function(){
+    $("#panel").fadeOut("fast");
+  }); 
+   $("#fliph2").click(function(){
+    $("#panel1").fadeOut("fast");
+  }); 
+ $("#fliph3").click(function(){
+    $("#panel2").fadeOut("fast");
+  }); 
+  $("#fliph4").click(function(){
+    $("#panel3").fadeOut("fast");
+  }); 
+ $("#usr_name").click(function(){
+    $("#panel4").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel3").fadeOut("fast");
+  }); 
+   $("#fliph5").click(function(){
+    $("#panel4").fadeOut("fast");
+  }); 
+});
+

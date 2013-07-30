@@ -1,0 +1,71 @@
+<html>
+ <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+<head>
+<style>
+
+table.groove {border-left-style:groove;}
+
+</style>
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+Project_Portal
+</title>
+<body>
+<div id="user_nav">
+  <% if user_signed_in? %>
+</div>
+<table class="groove" align="center" cellspacing="0" width="1024"  border="5">
+  <tr><td height="28" valign="top" style="background-color:#ADC2FF"><p style="text-align:left;">
+<img src="pesit-img.jpg" width="28" height="28"><font color="#000080" size="5"> <b>PROJECT PORTAL</b></font>
+<span style="float:right;"><font color="#0000FF" size="3"><a href="http://www.google.com">Search</a></span>
+</p><h3 align="right";valign="top"><%= link_to current_user.username, "/users/edit" %>     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></td>
+    
+<div style="clear: both;"></div>
+  </tr>
+<tr>
+<td width="1024" height="500" valign="top" >
+<p>These Are The Past Projects</p>
+<ul id="projects">
+<% @project.each do |c| %>
+<li><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%></li>
+<font color = #818181><%= c.description[0...300] %>...</font>
+
+<% end %>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+<% else %>
+
+<table class="groove" align="center" cellspacing="0" width="1024"  border="5">
+  <tr><td height="28" valign="top" style="background-color:#ADC2FF"><p style="text-align:left;">
+<img src="pesit-img.jpg" width="28" height="28"><font color="#000080" size="5"> <b>PROJECT PORTAL</b></font>
+<span style="float:right;"><font color="#0000FF" size="3"><a href="http://www.google.com">Search</a></span>
+</p><h3 align="right";valign="top"><a href="/">Login/Signup</a></td>
+    
+<div style="clear: both;"></div>
+  </tr>
+<tr>
+<td width="1024" height="500" valign="top" >
+<p>These Are The Past Projects</p>
+<ul id="projects">
+<% @project.each do |c| %>
+<li><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%></li>
+<font color = #818181><%= c.description[0...300] %>...</font>
+
+<% end %>
+</ul>
+</td>
+</tr>
+</table>
+<% end %>

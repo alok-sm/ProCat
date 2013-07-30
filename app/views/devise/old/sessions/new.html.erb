@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pesit Projects</title>
+<link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dashboard.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dept.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/home.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/projects.css?body=1" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/dashboard.js?body=1" type="text/javascript"></script>
+<script src="/assets/dept.js?body=1" type="text/javascript"></script>
+<script src="/assets/home.js?body=1" type="text/javascript"></script>
+<script src="/assets/projects.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="If+cU3KeuZl65228b3j0eb9MR/NoznyglqrwM0MDAR0=" name="csrf-token" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script> 
+
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").fadeToggle("fast");
+    $("#panel3").fadeOut("fast");
+  });
+});
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").fadeToggle("fast");
+  });
+});
+$(document).ready(function(){
+   $("#flip2").click(function(){
+    $("#panel2").fadeToggle("fast");
+  });
+});
+$(document).ready(function(){
+   $("#flip3").click(function(){
+    $("#panel3").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+  });
+}); 
+
+
+
+$(document).ready(function(){
+   $("#fliph1").click(function(){
+    $("#panel").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph2").click(function(){
+    $("#panel1").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph3").click(function(){
+    $("#panel2").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph4").click(function(){
+    $("#panel3").fadeOut("fast");
+  }); 
+});
+
+
+
+</script>
+
+<style type="text/css">  
+
+
+
+.panels
+{
+position:absolute;
+}
+
+
+
+#maintable
+{
+width:1020px;
+position:relative;
+
+}
+#content
+{
+
+}
+#amk
+{
+border-radius: 10px;
+width:600px;
+height:600px;
+}
+h1.a3
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 25px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 70%;
+	font-weight: normal;
+}
+h1.a4
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 25px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 50%;
+	font-weight: normal;
+}
+body 
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'ostwald', sans-serif;
+	font-size: 16px;
+	font-weight: 200;
+	color: #000000;
+	
+}
+
+
+#menu
+{
+	overflow: hidden;
+	width: 1012px;
+	padding: 0px 0px;
+	margin: 0px auto 0px auto;
+	background-color: #555555;
+	border-radius: 0px 0px 10px 10px;
+	font-size: 20px;
+	color: white;
+	
+}
+#menu a,#menu span
+{
+	display: inline-block;
+	padding: 15px 40px 15px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 200;
+	color: white;
+	border: none;
+}
+#menu ul {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px;
+	list-style: none;
+	line-height: normal;
+
+}
+#menu li {
+	display: inline-block;
+}
+#menu a:hover
+ {
+	text-decoration: none;
+        
+}
+ #menu .current_page_item a {
+	text-decoration: none;
+        
+}
+#menu .current_page_item a {
+	
+	color: white;
+	text-align:left;
+
+}
+
+#flip3 {
+margin-left:0%;
+margin-right:-315%;
+}
+#flip
+{
+
+border:solid 2px #c3c3c3;
+margin-left:-220%;
+}
+#panel,#panel1,#panel2,#panel3
+{
+font-color: white;
+padding:5px;
+text-align:center;
+background-color: #555555;
+border:solid 2px #c3c3c3;
+border-radius: 0px 0px 10px 10px;
+box-shadow: 0px 0px 7px 3px #555555;
+}
+#panel
+{
+margin-top:-264%;
+margin-left:1%;
+z-index:2;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel1
+{
+margin-top:-189%;
+margin-left:1%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel2
+{
+margin-top:-189%;
+margin-left:1%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel3
+{
+margin-top:-264%;
+margin-right:-614%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#search_button
+{
+margin-left:-60%;}
+
+
+</style>
+<body bgcolor="#DFDFDF">
+</head>
+<body>
+
+
+
+
+
+<center>
+<div id="maintable">
+<div id="menu">
+	
+		<ul>
+			<li class="current_page_item"><a href="#" id="flip"><strong>Departments</strong></a></li>
+			<li ><a href="/projects"id="search_button"><b>Search</b></a></li>
+			<li><span style="cursor:pointer;" class="last" id="flip3"><b>More</b></span></li>
+			
+		</ul>
+
+</div>
+
+<table border="0" id="content" align="center" width="1020" cellspacing="4">
+<tr>
+<td width="510" id="amk" height="600"align="left"bgcolor="white" valign="top">
+<center>
+<br><br><img src="/images/logo.jpg" width="258" height="300" ><br><br>
+<br> 
+<h1 class="a3">About <span><b>PESIT</b></span> </h1>
+
+<center>PESIT carries forward the principles <br>
+    and spirit of its founder Chairman <br>
+ <b>Prof. M. R. Doreswamy:</b><br>Innovation,
+ Entrepreneurship, Outreach and <br>
+     Perennial Love for Quality Education.
+</center>
+</center>
+</td>
+<td width="510" id="amk" height="600" align="center"bgcolor="white" valign="top">
+<center><br><br><br><h1 class="a4"><font color="#26156E">Sign <b>In</b></font></h1><br>
+
+
+
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<br>
+  <div><%= f.label :ID %><br />
+  <%= f.text_field :code %></div>
+<br><br>
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+<br>
+
+  <% if devise_mapping.rememberable? -%>
+
+    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+<br>
+  <% end -%>
+
+  <div><%= f.submit "Sign in" %></div>
+
+<% end %>
+<br><br>
+<div style="border:3px solid #555555;border-radius:10px;width:300px;">
+<p>Don't have an account?</p>
+<a href="/users/sign_up"><font color="#26156E">Sign <b>Up</b></font></a>
+<br><br>
+</div>
+
+
+
+
+</center>
+</td>
+</tr>
+</table>
+
+
+
+<div class="panels">
+
+<table width="250" id="panel" >
+<tr><td width="250" >
+<font color="white">
+<h4><div id="fliph1">&nbsp<&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDEPARTMENTS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4><div id="flip1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBE    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp></h4><hr>
+<h4><div id="flip2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspM.Tech&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp></h4><hr>
+
+<h4><a href="/dept/bca" style="text-decoration:none;"><font color="white">BCA</font></a></h4><hr>
+
+<h4><a href="/dept/mca" style="text-decoration:none;"><font color="white">MCA</font></a></h4><hr>
+
+<h4><a href="/dept/mba" style="text-decoration:none;"><font color="white">MBA</font></a></h4>
+
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="350"  id="panel1" >
+<tr><td width="350">
+<font color="white">
+<h4 id="fliph2"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspB.E
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4><a href="/dept/bt" style="text-decoration:none;"><font color="white">Bio Technology</font></a></h4><hr>
+
+<h4><a href="/dept/cv" style="text-decoration:none;"><font color="white">Civil</font></a></h4><hr>
+
+<h4><a href="/dept/cs" style="text-decoration:none;"><font color="white">Computer Science</font></a></h4><hr>
+
+<h4><a href="/dept/ec" style="text-decoration:none;"><font color="white">Electronics and Communication</font></a></h4><hr>
+
+<h4><a href="/dept/ee" style="text-decoration:none;"><font color="white">Electricals and Electronics</font></a></h4><hr>
+
+<h4><a href="/dept/is" style="text-decoration:none;"><font color="white">Information Science</font></a></h4><hr>
+
+<h4><a href="/dept/me" style="text-decoration:none;"><font color="white">Mechanical</font></a></h4><hr>
+
+<h4><a href="/dept/tc" style="text-decoration:none;"><font color="white">Telecommunication</font></a></h4>
+</font></td></tr>
+</table>
+</div>
+
+<div class="panels">
+<table width="350"  id="panel2" >
+<tr><td width="350">
+
+<font color="white">
+<h4 id="fliph3"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspM.Tech
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+
+<h4><a href="/dept/mcs" style="text-decoration:none;"><font color="white">Computer Science and Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mec" style="text-decoration:none;"><font color="white">Electronics and Communication Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mme" style="text-decoration:none;"><font color="white">Mechanical Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mse" style="text-decoration:none;"><font color="white">Software Engineering</font></a></h4><hr>
+
+<h4><a href="/dept/mwt" style="text-decoration:none;"><font color="white">Web Technologies</font></a></h4>
+
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="250"  id="panel3" >
+<tr><td width="250">
+<font color="white">
+<h4 id="fliph4"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMORE
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4>About</h4><hr>
+<h4><a href="http://pesit.pes.edu/contact-address" style="text-decoration:none;"><font color="white">Contact Us</font></a></h4><hr>
+<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4>
+</font></td></tr>
+</table>
+</div>
+
+
+
+
+
+
+</div>
+</center>
+</body>
+</html>
+
+
+
+
+
+
