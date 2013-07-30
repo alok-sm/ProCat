@@ -1,4 +1,4 @@
-<% if user_signed_in? and current_user.access_level != 3 %>
+<% if user_signed_in? and @all==true %>
 
 
 <!DOCTYPE html>
@@ -913,23 +913,21 @@ These are non mandatory fields</center>
 
 <% else %>
 
-<% if (defined?(current_user.access_level)).nil? %>
-<center> Log in to Create a Project</center><br>
+<% if @c==true %>
+<center>You need to be a member of the project to edit it.</center><br>
 
 <br>
 <% r=Random.new %>
-<%i=r.rand(7...12)%>
-<%puts "put"%>
-<%puts i%>
+<%i=r.rand(1...6)%>
 <center><img src="/other/<%=i%>.jpg" /></center>
 <br><br>
 <center><%= link_to "Go Back To Where I Was.",:back %></center>
 
 <%else%>
-
-<center> You do not have Privilege to Create a Project</center><br>
-<center><%= link_to "Go Back",:back %></center>
-
+<% if @d==true%>
+<center><a href="/">Sign Up</a> to edit this project or 
+<%= link_to "Go Back",:back %></center>
+<% end %>
 
 
 <% end %>

@@ -8,3 +8,7 @@ Departments
 
 Got search working again
 
+
+update:removed about in profile name dropdown
+       others web page is included in views :others.html.erb
+

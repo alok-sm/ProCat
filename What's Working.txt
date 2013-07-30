@@ -12,3 +12,5 @@ Got search working again
 update:removed about in profile name dropdown
        others web page is included in views :others.html.erb
 
+
+http://lit-springs-9187.herokuapp.com/

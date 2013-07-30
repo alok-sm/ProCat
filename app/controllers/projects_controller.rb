@@ -68,13 +68,19 @@ end
    end
 
 def edit
+
 @c=false
+@d=false
   @project = Project.find(params[:id])
  @all=@project.department.to_s.split(";")
+if (defined?current_user.code).nil?
+@d=true
+else
 @all.each { |all_each|
 if current_user.code == all_each
 @c=true
 end}
+end
 end
 
 def update

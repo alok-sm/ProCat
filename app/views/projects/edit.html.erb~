@@ -1,20 +1,10 @@
-<% if @c == false %>
-<center> You Are Not Allowed To Edit This Project</center><br>
-
-<br>
-<% r=Random.new %>
-<%i=r.rand(1...6)%>
-<%puts "put"%>
-<%puts i%>
-<center><img src="/other/<%=i%>.jpg" /></center>
-<br><br>
-<center><%= link_to "Go Back To Where I Was.",:back %></center>
-<% else %>
+<% if user_signed_in? and @all==true %>
 
 
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>Test2</title>
 <link rel="stylesheet" type="text/css" href="/stylesheet.css">
   <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
@@ -98,6 +88,158 @@ $(document).ready(function(){
   }); 
 });
 
+$(document).ready(function(){
+   $("#fliph6").click(function(){
+    $("#panel5").fadeOut("fast");
+  }); 
+});
+
+$(document).ready(function(){
+   $("#depsel").click(function(){
+    $("#panel5").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+    $("#panel3").fadeOut("fast");
+    $("#panel4").fadeOut("fast");
+  }); 
+});
+
+
+
+$(document).ready(function(){
+   $("#flipform1").click(function(){
+    $("#panelform1").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1a").click(function(){
+    $("#panelform").fadeIn("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1b").click(function(){
+ $("#panelform2").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1c").click(function(){
+ $("#panelform1").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1d").click(function(){
+ $("#panelform3").fadeIn("fast");
+$("#panelform2").fadeOut("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1e").click(function(){
+$("#panelform2").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1f").click(function(){
+    $("#panelform4").fadeIn("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1g").click(function(){
+ $("#panelform3").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1h").click(function(){
+    $("#panelform5").fadeIn("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1i").click(function(){
+    $("#panelform4").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform5").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1j").click(function(){
+    $("#panelform6").fadeIn("fast");
+ $("#panelform5").fadeOut("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+   
+  }); 
+});
+$(document).ready(function(){
+   $("#flipform1k").click(function(){
+    $("#panelform5").fadeIn("fast");
+    $("#panelform").fadeOut("fast");
+    $("#panelform1").fadeOut("fast");
+    $("#panelform2").fadeOut("fast");
+    $("#panelform3").fadeOut("fast");
+    $("#panelform4").fadeOut("fast");
+    $("#panelform6").fadeOut("fast");
+  }); 
+});
 </script>
 
 <style type="text/css">  
@@ -106,8 +248,8 @@ $(document).ready(function(){
 
 .panels
 {
-z-index:50;
-position:fixed;
+z-index:10;
+position:absolute;
 }
 
 
@@ -122,7 +264,10 @@ position:relative;
 border-radius: 10px 10px 10px 10px;
 }
 
-
+#flipform1,#flipform1a,#flipform1b,#flipform1c,#flipform1d,#flipform1e,#flipform1f,#flipform1g,#flipform1h,#flipform1i,#flipform1j,#flipform1k
+{
+display: inline-block;
+}
 
 
 
@@ -162,17 +307,17 @@ body
 
 #menu
 {
-	position:fixed;
+	
 	overflow: hidden;
 	width: 1024px;
 	padding: 0px 0px;
-	margin: 0px auto 0px auto;
+	margin: 0px auto 1px auto;
 	background:#555555;
 	border-radius: 0px 0px 13px 13px;
 	font-size: 20px;
 	color: white;
 }
-#menu a
+#menu a,#menu span
 {
 	display: inline-block;
 	padding: 15px 40px 15px 40px;
@@ -216,22 +361,21 @@ margin-right:-360%;
 border:solid 2px #c3c3c3;
 
 }
-#panel,#panel1,#panel2,#panel3, #panel4
+#panel,#panel1,#panel2,#panel3, #panel4, #panel5
 {
+
 font-color: white;
 padding:5px;
 text-align:center;
 background-color: #555555;
 border:solid 2px #c3c3c3;
 border-radius: 0px 0px 10px 10px;
-
+box-shadow: 0px 0px 7px 3px #555555;
 }
 #panel
 {
 margin-top:0%;
 margin-right:-135%;
-z-index:2;
-
 padding:2px;
 display:none;
 opacity:1;
@@ -280,6 +424,58 @@ opacity:1;
 
 }
 
+#panel5
+{
+border-radius: 10px 10px 10px 10px;
+width:350px;
+text-align:left;
+margin-top:-23%;
+padding:2px;
+display:none;
+opacity:1;
+z-index:2;
+}
+#panelform1,#panelform2,#panelform3,#panelform4,#panelform5,#panelform6
+{
+border-radius:10px 10px 10px 10px;
+position:absolute;
+display:none;
+}
+#panelform
+{
+border-radius:10px 10px 10px 10px;
+position:absolute;
+}
+#panelform1
+{
+
+z-index:2;
+}
+#panelform2
+{
+
+z-index:3;
+}
+#panelform3
+{
+
+z-index:4;
+}
+#panelform4
+{
+margin-top:-1%;
+z-index:5;
+}
+#panelform5
+{
+margin-top:-1%;
+z-index:6;
+}
+#panelform6
+{
+
+z-index:7;
+}
 .menu_buttons
 {
 text-align:center;
@@ -294,25 +490,13 @@ text-decoration:none;
 <body bgcolor="#DFDFDF">
 </head>
 <body>
-<% if user_signed_in? %>
+
 
 
 
 
 <center>
 <div id="maintable">
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -428,7 +612,6 @@ text-decoration:none;
 
 
 
-
 <table id="menu" valign="top" colspan="3">
 	<tr>
 			
@@ -438,7 +621,7 @@ text-decoration:none;
 		</td >
 
 		<td width="200" class="menu_buttons">
-			<a href="#" id="flip">Department</a>	
+			<span style="cursor:pointer;" id="flip">Department</span>	
 		</td>
                 <td width="200" class="menu_buttons">
 			<a href="/projects" id="search">Search</a>	
@@ -455,202 +638,262 @@ text-decoration:none;
 			<%end%>
 
 		<td class="last" id="flip3" width="100" class="menu_buttons">
-			<a href="#">More</a>	
+			<span style="cursor:pointer;">More</span>	
 		</td>
 	</tr>
 </table>
 
-<br><br><br>
-
-<table border="0" id="amk" align="center" bgcolor="white" width="1024" cellspacing="4" summary="Project Form Fields">
+<table border="0" id="amk" align="center" bgcolor="white" width="1024" cellspacing="4" summary="Project Form Fields"height="660">
 <tr>
 <td width="150"></td>
-<td width="724"  valign="top">
-<center><h1>Edit Project</h1></center>
+<td width="724"  valign="top"colspan="3">
+<center><h1>EDIT PROJECT</h1></center>
 <%= form_for(:project, :url => {:action => "update", :id => @project.id}) do |f| %>
- 
+
+<div id="panelform"><table cellspacing="0" width="700" class="card0"><br>
+<tr><td width="100"></td>
+<td>
 <br>
-   
-   <b><%= f.label(:p_title,"Project Title") %>&nbsp:</b>
-   &nbsp&nbsp<%= f.text_field(:p_title) %>
-  <br><br><br>
-  
-     <b> <%= f.label(:tags,"Tags") %>&nbsp:</b>
-   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.text_field(:tags) %>
-
-    <br><br><b><%= f.label(:objective,"Objective") %>&nbsp:</b>
-   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.text_field(:objective) %>
-  
-
-  
+<center><b>All fields are mandatory</b></center>
 <br><br>
-<b>Department:</b><br><br>
-    <label>
-      &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_bt %>
-      BE-Biotechnology</label>
+<b><%= f.label(:p_title,"Project Title") %>&nbsp:</b>
+   &nbsp&nbsp<%= f.text_field(:p_title, :required => true) %>
   <br><br>
-    <label>
+<b><span id="depsel" style="cursor:pointer;">Click to Select Department</span></b><br><br>
+    <div class="panels">
+<table width="250"  id="panel5" >
+<tr><td width="250">
+
+<font color="white">
+
+<br>
+<center><font id="fliph6" size="4.5" style="margin-bottom:1000px;cursor:pointer;"><b><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClick to Close
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></font></center><hr>
+
+
+&nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_bt %>
+      BE-Biotechnology</label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_cv %>
       BE-Civil</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_cs %>
       BE-Computer Science</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_ee %>
       BE-Electrical And Electronics</label>
-  <br><br>
-    <label>
+  <br>
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_ec %>
       BE-Electronics And Communication</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_is %>
       BE-Information Science</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_me %>
       BE-Mechanical</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_tc %>
       BE-Telecommunication</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_bca %>
       BCA</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mba %>
       MBA</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mca %>
       MCA</label>
- <br><br>
-    <label>
+ <br>
+   
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mcs %>
       MTech-Computer Science</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mec %>
       MTech-Electronics And Communications</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mme %>
       MTech-Mechanical</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mse %>
       MTech-Software Engineering</label>
-  <br><br>
-    <label>
+  <br>
+    
       &nbsp&nbsp&nbsp&nbsp<%= f.check_box :if_mwt %>
       MTech-Web Technologies</label>
-  <br><br><br>
+  <br><br>
 
-<b><%= f.label(:objective,"Objective of the Project") %></b><br><br>
-&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:objective, :size => '40x5') %><br><br><br>
 
-<b><%= f.label(:department,"Student List") %></b><br><br>
-&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:department, :size => '40x5') %><br><br><br>
+</font>
 
-<b><%= f.label(:guides,"guide List") %></b><br><br>
-&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5') %><br><br><br>
-  
+</td></tr>
+</table>
+</div> 
+   <b><%= f.label(:objective,"Objective Of the Project :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:objective, :size => '40x5', :required => true) %><br><br>
+<b><%= f.label(:status,"Status Of The Project") %></b>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "o", :required => true%>Open</label>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "c", :required => true%>Closed</label>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "p", :required => true%>Past</label>
+  <br><br>
+<center><h4 id="flipform1">next&nbsp></h4></center>
+</td></tr>
+</table>
+</div>
 
-  <b><%= f.label(:p_type1,"Project Type") %></b>
- <br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "research"%>Research</label>
-  <br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "mini"%>Mini</label>
-  <br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "hobby"%>Hobby</label>
- 
-  <br><br><br>
- <b> <%= f.label(:p_type2,"Impact Type") %></b>
-  <br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "sociological"%>Sociological</label>
-  <br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "economical"%>Economical</label>
-  <br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "technological"%>Technological</label>
 
-<br><br><br>
 
-<b><%= f.label(:synopsis,"Synopsis") %></b><br><br>
-&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:synopsis, :size => '40x5') %><br><br><br>
+<div  id="panelform1"><table class="card0" width="700"cellspacing="0">
+<tr><td width="100"></td>
+<td>
+<center>
+<h4 id="flipform1a"><&nbspBack</h4><br>
+<b>All fields are mandatory</b><br><br></center>
+<b><%= f.label(:p_type1,"Project Type") %></b><br>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "research", :required => true%>Research</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "mini", :required => true%>Mini</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "hobby", :required => true%>Hobby</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "funded", :required => true%>Funded</label> 
+<br><br>
+<b> <%= f.label(:p_type2,"Impact Type") %></b><br>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "sociological", :required => true%>Sociological</label>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "economical", :required => true%>Economical</label>
+  <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "technological", :required => true%>Technological</label><br><br><br><br><br><br>
+<center><h4 id="flipform1b">next&nbsp></h4>
+</center>
+</td></tr>
+</table></div>
 
-   <b><%= f.label(:description, "Description") %></b>
-   <br><br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:description, :size => '40x5') %>
-   <b><br><br><%= f.label(:requirements, "Student Requirements") %></b>
+<div id="panelform2"><table class="card0" width="700" cellspacing="0">
+<tr><td width="100"></td>
+<td><center>
+<h4 id="flipform1c"><&nbspBack</h4><br>
+<b>These are non-mandatory fields</b></center>
+<br><br>
+ <b> <%= f.label(:tags,"Tags :") %>&nbsp:</b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_field(:tags) %>
+<br><br>
+<b><%= f.label(:department,"Student List :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:department, :size => '40x5') %><br><br>
+<b><%= f.label(:guides,"Guides List :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5') %>
+<center><h4 id="flipform1d">next&nbsp></h4>
+</center>
+</td></tr>
+</table></div>
+
+<div id="panelform3"><table class="card0" width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td><center>
+<h4 id="flipform1e"><&nbspBack</h4><br>
+<b>These are non mandatory fields</b></center>
+<br><br>
+   <b><%= f.label(:description, "Description :") %></b>
+   <br><br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:description, :size => '40x5') %><br>
+   <b><br><%= f.label(:requirements, "Student Requirements :") %></b>
    <br><br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:requirements, :size => '40x5') %>
- 
-<br><br><br>
-  <b><%= f.label(:status,"Status Of The Project") %></b>
-  <br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "o"%>Open</label>
-  <br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "c"%>Closed</label>
-  <br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "p"%>Past</label>
-  <br><br><br>
- <b> Period Of Working :</b>
-<%= f.date_select :start_date, :order => [:day, :month, :year] %> to <%= f.date_select :end_date, :order => [:day, :month, :year] %>
-	 
-<br><br><br>
- <b> <%= f.label(:if_award,"Did The Project Win Any Awards?") %></b>
-<% if @project.if_award == true %><br><br>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "1", { :checked => true }%>Yes</label>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "0" %>No</label>
-<% else %>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "1"%>Yes</label>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "0", { :checked => true }%>No</label>
-<% end %>
+ <br><br>
+<b> Period Of Working :</b>
+<%= f.date_field :start_date %> to <%= f.date_field :end_date %>
+<center><h4 id="flipform1f">next&nbsp></h4>
+</center>
+</tr></td>
+</table></div>
 
+<div id="panelform4"><table class="card0" width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td><center>
+<h4 id="flipform1g"><&nbspBack</h4><br>
+<b>These are non mandatory fields</b></center>
+<br>
+ <b> <%= f.label(:if_award,"Did The Project Win Any Awards?") %></b>
+<% if @project.if_award == true %>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "1", { :checked => true }%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "0" %>No</label>
+<% else %>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "1"%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "0", { :checked => true }%>No</label>
+<% end %>
 <br><br>
   <b><%= f.label(:award_list,"Any Accompanying Details?") %></b>
- <br><br> &nbsp&nbsp&nbsp&nbsp<%= f.text_area(:award_list, :size => '40x5') %>
-
-<br><br><br>
+ <br> &nbsp&nbsp&nbsp&nbsp<%= f.text_area(:award_list, :size => '40x5') %>
+<br><br>
  <b> <%= f.label(:if_patent,"Has The Project Been Patented?") %></b>
 <% if @project.if_patent == true %>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "1", { :checked => true }%>Yes</label>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "0" %>No</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "1", { :checked => true }%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "0" %>No</label>
 <% else %>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "1"%>Yes</label>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "0", { :checked => true }%>No</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "1"%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "0", { :checked => true }%>No</label>
 <% end %>
 <br><br>
   <b><%= f.label(:patent_stuff,"Any Accompanying Details?") %></b>
-  <br><br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:patent_stuff, :size => '40x5') %> 
-<br><br><br>
-  <b><%= f.label(:if_product,"Has The Project Been Made Into A Product?") %></b>
+  <br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:patent_stuff, :size => '40x5') %>
+
+<center><h4 id="flipform1h">next&nbsp></h4>
+</center>
+</tr></td>
+</table></div>
+
+<div id="panelform5"><table class="card0" width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td><center>
+<h4 id="flipform1i"><&nbspBack</h4><br>
+<b>These are non mandatory fields</b></center>
+<br>
+ <b><%= f.label(:if_product,"Has The Project Been Made Into A Product?") %></b>
   <% if @project.if_product == true %>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "1", { :checked => true }%>Yes</label>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "0" %>No</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "1", { :checked => true }%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "0" %>No</label>
 <% else %>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "1"%>Yes</label>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "0", { :checked => true }%>No</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "1"%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "0", { :checked => true }%>No</label>
 <% end %>
   <br><br>
   <b><%= f.label(:product_stuff,"Any Accompanying Details?") %></b>
  <br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:product_stuff, :size => '40x5') %>
-<br><br><br>
+<br><br>
 <b><%= f.label(:if_paper,"Did The Project Publish Any Papers?") %></b>
 <% if @project.if_paper == true %>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "1", { :checked => true }%>Yes</label>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "0" %>No</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "1", { :checked => true }%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "0" %>No</label>
 <% else %>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "1"%>Yes</label>
-<br><br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "0", { :checked => true }%>No</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "1"%>Yes</label>
+<br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "0", { :checked => true }%>No</label>
 <% end %>
    <br><br>
   <b><%= f.label(:paper_stuff,"Any Accompanying Details?") %></b>
- <br> <br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:paper_stuff, :size => '40x5') %> 
-   
+<br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:paper_stuff, :size => '40x5') %> 
+   <center><h4 id="flipform1j">next&nbsp></h4>
+</center>
+</tr></td>
+</table></div>
+
+<div id="panelform6"><table class="card0" width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td><center>
+<h4 id="flipform1k"><&nbspBack</h4><br>
+These are non mandatory fields</center>
 <br><br><br>
-    <b><%= f.label(:p_title,"Outcome Of The Project, If Any") %></b>
+ <b><%= f.label(:p_title,"Outcome Of The Project, If Any") %></b><br><br>
    &nbsp&nbsp&nbsp&nbsp<%= f.text_field(:outcome) %>
- <br><br>
-
-<b><%= f.label(:synopsis,"Synopsis") %></b><br><br>
+ <br><br><br>
+<b><%= f.label(:synopsis,"Synopsis :") %></b><br><br>
 &nbsp&nbsp&nbsp&nbsp<%= f.text_area(:synopsis, :size => '40x5') %><br><br><br>
-
-<b><center><%= submit_tag("Update Project") %></center></b><br><br><br>
-<% end %>
+<b><center><%= submit_tag("Submit") %></center></b><br><br>
+</tr></td>
+</table></div>
 </td>
 <td width="150"></td>
 </tr>
@@ -659,18 +902,38 @@ text-decoration:none;
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-
-
-
+<% end %>
 
 </div>
-</center>
 </body>
 </html>
 
 
+
+
 <% else %>
-<meta http-equiv="refresh" content="0; URL=/users/sign_in">
+
+<% if @c==true %>
+<center>You need to be a member of the project to edit it.</center><br>
+
+<br>
+<% r=Random.new %>
+<%i=r.rand(1...6)%>
+<center><img src="/other/<%=i%>.jpg" /></center>
+<br><br>
+<center><%= link_to "Go Back To Where I Was.",:back %></center>
+
+<%else%>
+<% if @f==true%>
+<center><a href="/">Sign Up</a> to edit this project or 
+<%= link_to "Go Back",:back %></center>
+<% end %>
+
+
 <% end %>
 <% end %>
+
+
+
+
 
