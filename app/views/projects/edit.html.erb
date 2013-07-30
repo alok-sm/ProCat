@@ -1,4 +1,4 @@
-<% if user_signed_in? and @all==true %>
+<% if user_signed_in? and @c==true %>
 
 
 <!DOCTYPE html>
@@ -913,7 +913,7 @@ These are non mandatory fields</center>
 
 <% else %>
 
-<% if @c==true %>
+<% if @d== false %>
 <center>You need to be a member of the project to edit it.</center><br>
 
 <br>
@@ -924,10 +924,10 @@ These are non mandatory fields</center>
 <center><%= link_to "Go Back To Where I Was.",:back %></center>
 
 <%else%>
-<% if @d==true%>
+
 <center><a href="/">Sign Up</a> to edit this project or 
 <%= link_to "Go Back",:back %></center>
-<% end %>
+
 
 
 <% end %>
