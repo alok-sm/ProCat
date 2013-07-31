@@ -612,6 +612,7 @@ Shylaja S Sharath<br>
 </table>
 </div>
 
+
 <div class="panels">
 <table width="250"  id="panel4" >
 <tr><td width="250">
@@ -680,11 +681,12 @@ Shylaja S Sharath<br>
 <center><h1>ADD NEW PROJECT</h1></center>
 <%= form_for @project do |f| %>
 
-<div id="panelform"><table cellspacing="0" width="700" class="card0"><br>
-<tr><td width="100"></td>
-<td>
+<div id="panelform" class="card0">
 <br>
 <center><b>All fields are mandatory</b></center>
+<table cellspacing="0" width="700"><br>
+<tr><td width="100"></td>
+<td>
 <br><br>
 <b><%= f.label(:p_title,"Project Title") %>&nbsp:</b>
    &nbsp&nbsp<%= f.text_field(:p_title, :required => true) %>
@@ -777,19 +779,20 @@ Shylaja S Sharath<br>
   <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "c", :required => true%>Closed</label>
   <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :status, "p", :required => true%>Past</label>
   <br><br>
-<center><h4 id="flipform1">next&nbsp></h4></center>
 </td></tr>
 </table>
+<center><h4 id="flipform1" class="cardb" style="padding:5px">Next&nbsp></h4></center>
 </div>
 
 
 
-<div  id="panelform1"><table class="card0" width="700"cellspacing="0">
+<div  id="panelform1" class="card0">
+<center>
+<h4 id="flipform1a" class="cardb" style="padding:5px"><&nbspBack</h4><br>
+<b>All fields are mandatory</b><br><br></center>
+<table width="700"cellspacing="0">
 <tr><td width="100"></td>
 <td>
-<center>
-<h4 id="flipform1a"><&nbspBack</h4><br>
-<b>All fields are mandatory</b><br><br></center>
 <b><%= f.label(:p_type1,"Project Type") %></b><br>
 <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "research", :required => true%>Research</label>
 <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type1, "mini", :required => true%>Mini</label>
@@ -800,34 +803,41 @@ Shylaja S Sharath<br>
   <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "sociological", :required => true%>Sociological</label>
   <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "economical", :required => true%>Economical</label>
   <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :p_type2, "technological, :required => true"%>Technological</label><br><br><br><br><br><br>
-<center><h4 id="flipform1b">next&nbsp></h4>
-</center>
 </td></tr>
-</table></div>
+</table>
+<center><h4 id="flipform1b" class="cardb" style="padding:5px">Next&nbsp></h4>
+</center>
+</div>
 
-<div id="panelform2"><table class="card0" width="700" cellspacing="0">
-<tr><td width="100"></td>
-<td><center>
-<h4 id="flipform1c"><&nbspBack</h4><br>
+<div id="panelform2" class="card0">
+<center>
+<h4 id="flipform1c" class="cardb" style="padding:5px"><&nbspBack</h4><br>
 <b>These are non-mandatory fields</b></center>
-<br><br>
+<table width="700" cellspacing="0">
+<tr><td width="100"></td>
+<td>
+<br>
  <b> <%= f.label(:tags,"Tags :") %>&nbsp:</b><br><br>
 &nbsp&nbsp&nbsp&nbsp<%= f.text_field(:tags) %>
-<br><br>
+<br>
 <b><%= f.label(:department,"Student List :") %></b><br><br>
 &nbsp&nbsp&nbsp&nbsp<%= f.text_area(:department, :size => '40x5') %><br><br>
 <b><%= f.label(:guides,"Guides List :") %></b><br><br>
 &nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5') %>
-<center><h4 id="flipform1d">next&nbsp></h4>
-</center>
-</td></tr>
-</table></div>
 
-<div id="panelform3"><table class="card0" width="700"  cellspacing="0">
-<tr><td width="100"></td>
-<td><center>
-<h4 id="flipform1e"><&nbspBack</h4><br>
+</td></tr>
+</table>
+<center><h4 id="flipform1d" class="cardb" style="padding:5px">Next&nbsp></h4>
+</center>
+</div>
+
+<div id="panelform3" class="card0">
+<center>
+<h4 id="flipform1e"class="cardb" style="padding:5px"><&nbspBack</h4><br>
 <b>These are non mandatory fields</b></center>
+<table width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td>
 <br><br>
    <b><%= f.label(:description, "Description :") %></b>
    <br><br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:description, :size => '40x5') %><br>
@@ -836,16 +846,19 @@ Shylaja S Sharath<br>
  <br><br>
 <b> Period Of Working :</b>
 <%= f.date_field :start_date %> to <%= f.date_field :end_date %>
-<center><h4 id="flipform1f">next&nbsp></h4>
-</center>
 </tr></td>
-</table></div>
+</table>
+<center><h4 id="flipform1f"class="cardb" style="padding:5px">Next&nbsp></h4>
+</center>
+</div>
 
-<div id="panelform4"><table class="card0" width="700"  cellspacing="0">
-<tr><td width="100"></td>
-<td><center>
-<h4 id="flipform1g"><&nbspBack</h4><br>
+<div id="panelform4" class="card0">
+<center>
+<h4 id="flipform1g"class="cardb" style="padding:5px"><&nbspBack</h4><br>
 <b>These are non mandatory fields</b></center>
+<table width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td>
 <br>
  <b> <%= f.label(:if_award,"Did The Project Win Any Awards?") %></b>
 <% if @project.if_award == true %>
@@ -855,7 +868,7 @@ Shylaja S Sharath<br>
 <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "1"%>Yes</label>
 <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_award, "0", { :checked => true }%>No</label>
 <% end %>
-<br><br>
+<br>
   <b><%= f.label(:award_list,"Any Accompanying Details?") %></b>
  <br> &nbsp&nbsp&nbsp&nbsp<%= f.text_area(:award_list, :size => '40x5') %>
 <br><br>
@@ -867,22 +880,22 @@ Shylaja S Sharath<br>
 <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "1"%>Yes</label>
 <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_patent, "0", { :checked => true }%>No</label>
 <% end %>
-<br><br>
+<br>
   <b><%= f.label(:patent_stuff,"Any Accompanying Details?") %></b>
   <br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:patent_stuff, :size => '40x5') %>
-
-<center><h4 id="flipform1h">next&nbsp></h4>
-</center>
 </tr></td>
-</table></div>
-
-<div id="panelform5"><table class="card0" width="700"  cellspacing="0">
-<tr><td width="100"></td>
-<td><center>
-<div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
-<h4 id="flipform1i"><&nbspBack</h4><br>
+</table>
+<center><h4 id="flipform1h"class="cardb" style="padding:5px">Next&nbsp></h4>
+</center>
 </div>
+
+<div id="panelform5" class="card0">
+<center>
+<h4 id="flipform1i"class="cardb" style="padding:5px"><center><&nbspBack</center></h4><br>
 <b>These are non mandatory fields</b></center>
+<table width="700"  cellspacing="0">
+<tr><td width="100"></td>
+<td>
 <br>
  <b><%= f.label(:if_product,"Has The Project Been Made Into A Product?") %></b>
   <% if @project.if_product == true %>
@@ -892,7 +905,7 @@ Shylaja S Sharath<br>
 <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "1"%>Yes</label>
 <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_product, "0", { :checked => true }%>No</label>
 <% end %>
-  <br><br>
+  <br>
   <b><%= f.label(:product_stuff,"Any Accompanying Details?") %></b>
  <br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:product_stuff, :size => '40x5') %>
 <br><br>
@@ -904,28 +917,32 @@ Shylaja S Sharath<br>
 <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "1"%>Yes</label>
 <br><label>&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :if_paper, "0", { :checked => true }%>No</label>
 <% end %>
-   <br><br>
+   <br>
   <b><%= f.label(:paper_stuff,"Any Accompanying Details?") %></b>
 <br>&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:paper_stuff, :size => '40x5') %> 
-   <center><h4 id="flipform1j">next&nbsp></h4>
-</center>
-</tr></td>
-</table></div>
 
-<div id="panelform6"><table class="card0" width="700"  cellspacing="0">
+</tr></td>
+</table>
+<center><h4 id="flipform1j"class="cardb" style="padding:5px">Next&nbsp></h4>
+</center>
+</div>
+
+<div id="panelform6" class="card0">
+<center>
+<h4 id="flipform1k"class="cardb" style="padding:5px;"><&nbspBack</h4><br>These are non mandatory fields</center>
+<table width="700"  cellspacing="0">
 <tr><td width="100"></td>
-<td><center>
-<h4 id="flipform1k"><&nbspBack</h4><br>
-These are non mandatory fields</center>
+<td>
 <br><br><br>
  <b><%= f.label(:p_title,"Outcome Of The Project, If Any") %></b><br><br>
    &nbsp&nbsp&nbsp&nbsp<%= f.text_field(:outcome) %>
  <br><br><br>
 <b><%= f.label(:synopsis,"Synopsis :") %></b><br><br>
 &nbsp&nbsp&nbsp&nbsp<%= f.text_area(:synopsis, :size => '40x5') %><br><br><br>
-<b><center><%= submit_tag("Submit") %></center></b><br><br>
 </tr></td>
-</table></div>
+</table>
+<b><center><%= submit_tag("Submit") %></center></b><br><br>
+</div>
 </td>
 <td width="150"></td>
 </tr>

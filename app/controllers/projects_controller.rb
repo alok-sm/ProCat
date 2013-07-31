@@ -51,7 +51,10 @@ if(@project.url_attatched.blank? == false)
 @project.url_attatched = ""
 @project.save
    end
-   @all=@project.department.to_s.split(";")
+puts "im here"
+@all=@project.department.to_s.split(";")
+
+	
    end
 
 def index
@@ -97,20 +100,7 @@ end
 new=@project.department.to_s.split(";")
 newg=@project.guides.to_s.split(";")
 
-puts "%%%%%%%%%%%%%"
-puts "new"
-print new
-puts ""
-puts "old"
-print old
-puts ""
-puts "newg"
-print newg
-puts ""
-puts "oldg"
-print oldg
-puts ""
-puts "%%%%%%%%%%%%"
+
 
 
 
