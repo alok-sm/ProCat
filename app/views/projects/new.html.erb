@@ -820,10 +820,20 @@ Shylaja S Sharath<br>
  <b> <%= f.label(:tags,"Tags :") %>&nbsp:</b><br><br>
 &nbsp&nbsp&nbsp&nbsp<%= f.text_field(:tags) %>
 <br>
+
+<% if current_user.access_level.to_s.include?("2") %>
+<b><%= f.label(:department,"Student List :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:department, :size => '40x5', :value => current_user.code) %><br><br>
+<b><%= f.label(:guides,"Guides List :") %></b><br><br>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5') %>
+<% else %>
+<% if current_user.access_level.to_s.include?("1") %>
 <b><%= f.label(:department,"Student List :") %></b><br><br>
 &nbsp&nbsp&nbsp&nbsp<%= f.text_area(:department, :size => '40x5') %><br><br>
 <b><%= f.label(:guides,"Guides List :") %></b><br><br>
-&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5') %>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5', :value => current_user.code) %>
+<% end %>
+<% end %>
 
 </td></tr>
 </table>

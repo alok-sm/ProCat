@@ -37,7 +37,7 @@ margin-right:13px;
 }
 body
 {
-font-family:Garamond;
+font-family:Helvetica;
 }
 
 .cardx

@@ -55,17 +55,15 @@ margin-bottom:20px;
 box-shadow:0px 0px 8px 0px #555555;
 }
 
-@font-face {
-    font-family: "roboto";
-    src: url('/roboto/Roboto-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-    font-family: "robotot";
-    src: url('/roboto/RobotoCondensed-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
+.cardb
+{
+border:1px solid #DDDDDD;
+box-shadow: 0px 0px 8px 0px #bbbbbb;
+
+text-align:left;
+background-color:#E5E5E5;
+border-radius:5px;
+margin-bottom:20px;
 }
 
 
