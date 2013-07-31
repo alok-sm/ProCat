@@ -789,19 +789,12 @@ text-decoration:none;
  <b> <%= f.label(:tags,"Tags :") %>&nbsp:</b><br><br>
 &nbsp&nbsp&nbsp&nbsp<%= f.text_field(:tags) %>
 <br>
-<% if current_user.access_level = 2 %>
-<b><%= f.label(:department,"Student List :") %></b><br><br>
-&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:department, :size => '40x5', :value => current_user.code) %><br><br>
-<b><%= f.label(:guides,"Guides List :") %></b><br><br>
-&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5') %>
-<% end %>
 
-<% if current_user.access_level = 1 %>
 <b><%= f.label(:department,"Student List :") %></b><br><br>
 &nbsp&nbsp&nbsp&nbsp<%= f.text_area(:department, :size => '40x5') %><br><br>
 <b><%= f.label(:guides,"Guides List :") %></b><br><br>
-&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5', :value => current_user.code) %>
-<% end %>
+&nbsp&nbsp&nbsp&nbsp<%= f.text_area(:guides, :size => '40x5') %>
+
 
 </td></tr>
 </table>
