@@ -16,3 +16,5 @@ mv ./config/database.yml ./config/db/database.yml
 
 mv ./gemtemp/Gemfile ./Gemfile
 mv ./config/dbtemp/database.yml ./config/database.yml
+
+bundle install
