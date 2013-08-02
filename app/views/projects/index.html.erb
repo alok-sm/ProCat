@@ -496,7 +496,7 @@ Shylaja S Sharath<br>
 <h4 id="fliph5"><% if user_signed_in? %><&nbsp&nbsp<%=current_user.username%>&nbsp<% end %>
 </h4><hr>
 
-<h4><a href="<%= current_user.linkedin %>" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
+<h4><a href="<% if user_signed_in? %><%= current_user.linkedin %><% end %>" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
 <h4><a href="/users/edit" style="text-decoration:none;"><font color="white">Edit Profile</font></a></h4><hr>
 <h4><font color="white"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>'sign_out'%></font></h4>
 </font>

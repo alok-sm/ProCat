@@ -15,29 +15,62 @@ def create
 	
 
 	
-	std=@project.department.split(";")
-	@users = User.where(:code => std)
+	@std=@project.department.split(";")
+     @std.each { |std_each|
+     if User.where(:code => std_each).present?
+	 var=1
+      else
+      if Shadow.where(:code => std_each).present?
+	@shadow=Shadow.where(:code => std_each)
+      lt=@shadow.first
+      lt.p_list="#{lt.p_list};#{@project.id}"
+      lt.save
+      else
+     @shadow=Shadow.new
+	@shadow.code = std_each
+	@shadow.p_list = @project.id
+     @shadow.save 
+	end
+	 end
+	 if var.to_s.include?("1")
+	 var=0
+	@users = User.where(:code => std_each)
 
 	@users.each do |c|
 	c.projects = "#{c.projects};#{@project.id}"
 	c.save
-
+     end
 	end
+}
 
-	std=@project.guides.split(";")
-	@users = User.where(:code => std)
+	@std=@project.guides.split(";")
+     @std.each { |std_each|
+     if User.where(:code => std_each).present?
+     var=1
+	 else
+      if Shadow.where(:code => std_each).present?
+	@shadow=Shadow.where(:code => std_each)
+      lt=@shadow.first
+      lt.g_list="#{lt.g_list};#{@project.id}"
+      lt.save
+      else
+     @late=Shadow.new
+	@late.code = std_each
+	@late.g_list = @project.id
+	@late.save
+      end
+
+	 end
+	 if var.to_s.include?("1")
+	 var=0
+	@users = User.where(:code => @std)
 
 	@users.each do |c|
 	c.projects = "#{c.projects};#{@project.id}"
 	c.save
-
-	
-
-	
 	end
-	
-
-
+	end
+}
 end
 
 def show
@@ -51,6 +84,8 @@ if(@project.url_attatched.blank? == false)
 @project.url_attatched = ""
 @project.save
    end
+
+@all=@project.department.to_s.split(";")
 
 	
    end
@@ -80,7 +115,8 @@ else
 @all.each { |all_each|
 if current_user.code == all_each
 @c=true
-end}
+end
+}
 end
 end
 
@@ -89,28 +125,19 @@ def update
   old=@project.department.to_s.split(";")
   oldg=@project.guides.to_s.split(";")
   if @project.update_attributes(params[:project]) 
-
  redirect_to "/"
-
 end
 
 
 new=@project.department.to_s.split(";")
 newg=@project.guides.to_s.split(";")
 
-
-
-
-
-
-
-
-
-
 new.each { |new_each| 
 	if (old.include?(new_each))
 	else
 		puts "im in new guide"
+     if User.where(:code => new_each).present?
+    
 		@users = User.where(:code => new_each)
 		c=@users.first
 puts c.projects
@@ -119,18 +146,28 @@ puts c.projects
 		c.save
 puts c.projects
 		@users.first.save
-	end}
+	else
+      if Shadow.where(:code => new_each).present?
+	@shadow=Shadow.where(:code => new_each)
+      lt=@shadow.first
+      lt.p_list="#{lt.p_list};#{@project.id}"
+      lt.save
+      else
+     @late=Shadow.new
+	@late.code = new_each
+	@late.p_list = @project.id
+	@late.save
+      end
 
-
-
-
-
-
-
+	end
+end
+}
 old.each { |old_each|
 	if (new.include?(old_each))
 	else
 		puts "im in delete guide"
+     if User.where(:code => old_each).present?
+     
 		@users = User.where(:code => old_each)
 		c=@users.first
 		puts c.projects
@@ -143,19 +180,22 @@ old.each { |old_each|
 		c.save
 puts c.projects
 		@users.first.save
-	end}
+	else
+		@shadow = Shadow.where(:code => old_each)
+		c=@shadow.first
+		c.p_list.gsub!(";#{@project.id}","")
+		x=c.p_list
+		c.reload
+		@shadow.first.save
 
-
-
-
-
-
-
-
+	end
+end
+}
 newg.each { |new_each| 
 		if (oldg.include?(new_each))
 	else
 		puts "im in new guide"
+     if User.where(:code => new_each).present?
 		@users = User.where(:code => new_each)
 		c=@users.first
 puts c.projects
@@ -164,31 +204,42 @@ puts c.projects
 		c.save
 puts c.projects
 		@users.first.save
-	end}
-
-
-
-
-
-
-
+	else
+      if Shadow.where(:code => new_each).present?
+	@shadow=Shadow.where(:code => new_each)
+      lt=@shadow.first
+      lt.g_list="#{lt.g_list};#{@project.id}"
+      lt.save
+      else
+     @late=Shadow.new
+	@late.code = new_each
+	@late.g_list = @project.id
+	@late.save
+	end
+end
+end
+}
 oldg.each { |old_each|
 	if (newg.include?(old_each))
 	else
 		puts "im in delete guide"
+     if User.where(:code => old_each).present?
 		@users = User.where(:code => old_each)
 		c=@users.first
-		puts c.projects
 		c.projects.gsub!(";#{@project.id}","")
-		puts c.projects
 		x=c.projects
 		c.reload
 		c.update_attributes(:projects => x)
-		puts c.projects
 		@users.first.save
-	end}
-
+	else
+		@shadow = Shadow.where(:code => old_each)
+		c=@shadow.first
+		c.g_list.gsub!(";#{@project.id}","")
+		x=c.g_list
+		c.reload
+		@shadow.first.save
+	end
 end
+}
+ end
 end
-
-

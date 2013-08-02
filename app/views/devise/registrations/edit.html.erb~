@@ -355,9 +355,160 @@ text-decoration:none;
   <div><%= f.label  :LinkedIn_Url %><br>
  <font color="#555555" size="2">Paste your public profile URL here(Don't forget the "http://")</font><br>
 
-  <%= f.text_field :linkedin, :size => "40"%></div>
+  <%= f.text_field :linkedin, :size => "40"%></div><br>
+<br>
+<% if current_user.access_level == 1 %>
+<div align="center" style="text-align:left;width:430px;">
+<b><%= f.label(:department," Selected your Department :") %></b><br>
 
+  <br>
 
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"bt"%>
+      BE-Biotechnology</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"cv"%>
+      BE-Civil Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"cs"%>
+      BE-Computer Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"ee"%>
+      BE-Electrical And Electronics Engineering</label>
+  <br>
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"ec"%>
+      BE-Electronics And Communication Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"is"%>
+      BE-Information Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"me"%>
+      BE-Mechanical Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"tc"%>
+      BE-Telecommunication Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"bca"%>
+      Bachelor of Computer Application</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mba"%>
+      Master of Buisness Administration</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mca"%>
+      Master of Computer Application</label>
+ <br>
+   
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mcs"%>
+      MTech-Computer Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mec"%>
+      MTech-Electronics And Communications Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mme"%>
+      MTech-Mechanical Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mse"%>
+      MTech-Software Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mwt"%>
+      MTech-Web Technologies</label>
+</div><br><br>
+<% end %>
+<% if current_user.access_level == 2 %>
+<div align="center" style="text-align:left;width:430px;">
+<b><%= f.label(:department,"Select your Department :") %></b><br>
+
+  <br>
+
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"bt"%>
+      BE-Biotechnology</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"cv"%>
+      BE-Civil Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"cs"%>
+      BE-Computer Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"ee"%>
+      BE-Electrical And Electronics Engineering</label>
+  <br>
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"ec"%>
+      BE-Electronics And Communication Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"is"%>
+      BE-Information Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"me"%>
+      BE-Mechanical Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"tc"%>
+      BE-Telecommunication Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"bca"%>
+      Bachelor of Computer Application</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mba"%>
+      Master of Buisness Administration</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mca"%>
+      Master of Computer Application</label>
+ <br>
+   
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mcs"%>
+      MTech-Computer Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mec"%>
+      MTech-Electronics And Communications Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mme"%>
+      MTech-Mechanical Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mse"%>
+      MTech-Software Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mwt"%>
+      MTech-Web Technologies</label>
+<h3>Which Year are you in?:</h3>
+&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :year,"1"%>First year</label>
+<br>
+&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :year,"2"%>Second year</label>
+<br>
+&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :year,"3"%>third year</label>
+<br>
+&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :year,"4"%>Fourth year</label>
+<br>
+</div><b><br>
+<% end %>
+<% if current_user.access_level == 3 %>
+
+<center><%= f.label(:company,"Where are you from?") %></b><br>
+   &nbsp&nbsp<%= f.text_field(:company) %></center>
+<br><br><% end %>
   <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
   <%= f.password_field :password, :autocomplete => "off" %></div>
 

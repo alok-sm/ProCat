@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test2</title>
+  
 <link rel="stylesheet" type="text/css" href="/stylesheet.css">
   <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
 <link href="/assets/dashboard.css?body=1" media="all" rel="stylesheet" type="text/css" />
@@ -496,13 +496,43 @@ text-decoration:none;
 <font color="white">
 <h4 id="fliph4"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMORE
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
-<h4>About</h4><hr>
+
 <h4><a href="http://pesit.pes.edu/contact-address" style="text-decoration:none;"><font color="white">Contact Us</font></a></h4><hr>
-<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4>
+<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4><hr>
+<b>Created By</b><br><br>
+
+<div><img src="/img/alok.png" height="50"width="50"   style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+<span style="margin-right:3px;">Alok Shankar M</span><br>
+<a href="http://in.linkedin.com/pub/alok-shankar/75/731/a15"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:alok.shankar.m@gmail.com"><font color="white">Email</font></a></div></div><br>
+
+
+<div><img src="/img/abhinav.png" height="50"width="50"  style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+Abhinav M Kulkarni<br>
+<a href="http://in.linkedin.com/pub/abhinav-kulkarni/5b/126/222"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:abhinavmkulkarni@gmail.com"><font color="white">Email</font></a></div></div><br>
+
+<div><img src="/img/akshay.png" height="50"width="50"  style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+Akshay R Deshpande<br>
+<a href="http://in.linkedin.com/pub/akshay-r-d/78/2a9/88a/"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:jetleerd@gmail.com"><font color="white">Email</font></a></div></div><hr>
+
+
+<b>Under the Guidance Of</b><br><br>
+<div><img src="/img/hod.png" height="50"width="50"  style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+Shylaja S Sharath<br>
+<a href="http://in.linkedin.com/pub/shylaja-s-s/1b/409/49b"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:shylaja.sharath@pes.edu"><font color="white">Email</font></a></div></div>
+
+
+
 </font></td></tr>
 </table>
 </div>
-
 
 <div class="panels">
 <table width="250"  id="panel4" >
@@ -512,7 +542,7 @@ text-decoration:none;
 <h4 id="fliph5"><% if user_signed_in? %><&nbsp&nbsp<%=current_user.username%>&nbsp<% end %>
 </h4><hr>
 
-<h4><a href="#" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
+<h4><a href="<% if user_signed_in? %><%= current_user.linkedin %><% end %>" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
 <h4><a href="/users/edit" style="text-decoration:none;"><font color="white">Edit Profile</font></a></h4><hr>
 <h4><font color="white"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>'sign_out'%></font></h4>
 </font></td></tr>
@@ -768,10 +798,12 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <center>
 <div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:770px;">
 <b>People working on this project:</b><br><br>
-<% ar=@project.department.to_s.split(";") %>
-<% @users = User.where(:code => ar) %>
+<% @ar=@project.department.to_s.split(";") %>
+<% @ar.each{ |ar_each| %>
+<% if User.where(:code => ar_each).present? %>
+<% @users = User.where(:code => ar_each) %>
 
-<% @users.each do |c| %>
+<% c=@users.first %>
 
 <div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
 
@@ -792,7 +824,12 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <% end %>
 </center>
 </div>
+<% else %>
+<div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
+<b><%= ar_each %></b>, Who is not currently registered on this website.
+</div>
 <% end %>
+<% } %>
 </div>
 </center>
 
@@ -810,10 +847,12 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <center>
 <div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:770px;">
 <b>Guides:</b><br><br>
-<% ar=@project.guides.to_s.split(";") %>
-<% @users = User.where(:code => ar) %>
+<% @ar=@project.guides.to_s.split(";") %>
+<% @ar.each{ |ar_each| %>
+<% if User.where(:code => ar_each).present? %>
+<% @users = User.where(:code => ar_each) %>
 
-<% @users.each do |c| %>
+<% c=@users.first %>
 
 <div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
 
@@ -830,7 +869,12 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <% end %>
 </center>
 </div>
+<% else %>
+<div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
+<center><b><%= ar_each %></b>, Who is not currently registered on this website.</center>
+</div>
 <% end %>
+<% } %>
 </div>
 </center>
 
@@ -847,7 +891,7 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <b>Attached files:</b><br>
 <font size="2">right-click and "save link" to download the files.</font><br><br>
 
-<% @uploads = Upload.where(:project => @project.id ) %>
+<% @uploads = Upload.where(:project => @project.id.to_s ) %>
 
 
 
@@ -944,7 +988,74 @@ Edit This Project
 </center>
 <% end %>
 <% end %>
+
+
+
+
 <br>
+
+
+
+
+
+
+
+
+
+
+
+<center>
+
+<table width="500" max-height="500" >
+<tr><td width="500" max-height="500" >
+
+
+<div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:770px;">
+<center><b>Comments</b></center><br>
+
+
+<% if user_signed_in?%><center>
+<div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;"><center>
+<%= form_for(:project) do |f| %>
+
+ <br><b>Add a new Comment:</b><br><br>
+   <%= f.text_area(:comment_tmp, :size => '80x3', :autocomplete => :off) %><br><br>
+<%= f.submit "Submit" %><br><br>
+
+<% end %>
+</center></div></center>
+<% else %>
+<center><a href="/users/sign_in">Log In</a> or <a href="/users/sign_up">Sign Up</a> to add new Comments</center><br><br>
+<% end %>
+
+<% @msg=@project.comments.to_s.split("%d%") %>
+<% @msg = Kaminari.paginate_array(@msg).page(params[:page]).per(10) %>
+ <% @msg.each{ |each_msg|%> 
+<%stuff=each_msg.split("%n%")%>
+<center>
+<div class="card0" style="background-color:#EFEFEF;width:690px;padding:5px 20px 5px 20px;">
+<p><b><%=stuff.second%> </b><%=stuff.third%></p></div></center>
+
+
+<%}%>
+<center><%= paginate @msg %></center>
+
+
+
+</td></tr>
+</table>
+
+</center>
+
+</div>
+<br>
+
+
+
+
+
+
+
 
 
 </td>

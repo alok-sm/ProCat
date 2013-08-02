@@ -477,10 +477,24 @@ Shylaja S Sharath<br>
 
 
 <div class="card">
-<center><div class="card1"><br><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%><br><br>
+<center><div class="card1"><br><center><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%></center>
+<span style="float:right"><%= c.start_date %> to <%= c.start_date %></span>
+<span style="float:left">Worked as Project Member</span><br><br>
 <font color = #818181><%= c.description[0...300] %><% if c.description.length > 300 %>...<% end %><br><br></font></div></center></div>
 <% } %>
 
+<% ar=current_user.projects_g.to_s.split(";")%>
+<% ar.shift %>
+<% ar.each{ |x| %>
+<% c=Project.where(id:x).first %>
+
+
+<div class="card">
+<center><div class="card1"><br><center><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%></center>
+<span style="float:right"><%= c.start_date %> to <%= c.start_date %></span>
+<span style="float:left">Worked as Project Guide</span><br><br>
+<font color = #818181><%= c.description[0...300] %><% if c.description.length > 300 %>...<% end %><br><br></font></div></center></div>
+<% } %>
 
 
 </td>

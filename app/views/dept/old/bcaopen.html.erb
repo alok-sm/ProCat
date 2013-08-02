@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test2</title>
-  <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="/stylesheet2.css">
+
+<title>Test2</title>
+<link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
 <link href="/assets/dashboard.css?body=1" media="all" rel="stylesheet" type="text/css" />
 <link href="/assets/dept.css?body=1" media="all" rel="stylesheet" type="text/css" />
 <link href="/assets/home.css?body=1" media="all" rel="stylesheet" type="text/css" />
@@ -18,327 +23,15 @@
 <meta content="If+cU3KeuZl65228b3j0eb9MR/NoznyglqrwM0MDAR0=" name="csrf-token" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
 </script>
-<script> 
-$(document).ready(function(){
-  $("#flip").click(function(){
-    $("#panel").fadeToggle("fast");
-    $("#panel3").fadeOut("fast");
-    $("#panel4").fadeOut("fast");
-  });
-});
-$(document).ready(function(){
-  $("#flip1").click(function(){
-    $("#panel1").fadeToggle("fast");
-  });
-});
-$(document).ready(function(){
-   $("#flip2").click(function(){
-    $("#panel2").fadeToggle("fast");
-  });
-});
-$(document).ready(function(){
-   $("#flip3").click(function(){
-    $("#panel3").fadeToggle("fast");
-    $("#panel").fadeOut("fast");
-    $("#panel1").fadeOut("fast");
-    $("#panel2").fadeOut("fast");
-    $("#panel4").fadeOut("fast");
-  });
-}); 
+<script src="/animate.js"></script>
 
 
-
-$(document).ready(function(){
-   $("#fliph1").click(function(){
-    $("#panel").fadeOut("fast");
-  }); 
-});
-$(document).ready(function(){
-   $("#fliph2").click(function(){
-    $("#panel1").fadeOut("fast");
-  }); 
-});
-$(document).ready(function(){
-   $("#fliph3").click(function(){
-    $("#panel2").fadeOut("fast");
-  }); 
-});
-$(document).ready(function(){
-   $("#fliph4").click(function(){
-    $("#panel3").fadeOut("fast");
-  }); 
-});
-$(document).ready(function(){
-   $("#usr_name").click(function(){
-    $("#panel4").fadeToggle("fast");
-    $("#panel").fadeOut("fast");
-    $("#panel1").fadeOut("fast");
-    $("#panel2").fadeOut("fast");
-    $("#panel3").fadeOut("fast");
-  }); 
-});
-$(document).ready(function(){
-   $("#fliph5").click(function(){
-    $("#panel4").fadeOut("fast");
-  }); 
-});
-
-</script>
-
-<style type="text/css">  
-
-
-
-.panels
-{
-position:absolute;
-}
-
-
-#maintable
-{
-width:1024px;
-position:relative;
-
-}
-#content
-{
-
-}
-#amk
-{
-border-radius: 10px 10px 10px 10px;
-width:600px;
-height:600px;
-}
-h2.a3
-{
-	border-bottom: 4px solid #1E0B6A;
-	color: #26156E;
-	font-size: 18px;
-	margin: 0;
-	margin-bottom: 10px;
-	padding: 10px 0;
-	width: 70%;
-	font-weight: normal;
-}
-h1.a4
-{
-	border-bottom: 4px solid #1E0B6A;
-	color: #26156E;
-	font-size: 30px;
-	margin: 0;
-	margin-bottom: 10px;
-	padding: 10px 0;
-	width: 50%;
-	font-weight: normal;
-}
-body 
-{
-	margin: 0;
-	padding: 0;
-	font-family: 'Oswald', sans-serif;
-	font-size: 16px;
-	font-weight: 200;
-	color: #000000;
-	
-}
-
-
-#menu
-{
-	overflow: hidden;
-	width: 1024px;
-	padding: 0px 0px;
-	margin: 0px auto 0px auto;
-	background:#555555;
-	border-radius: 0px 0px 13px 13px;
-	font-size: 20px;
-	color: white;
-}
-#menu a
-{
-	display: inline-block;
-	padding: 15px 40px 15px 40px;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 16px;
-	font-weight: 200;
-	color: white;
-	border: none;
-}
-
-
-
-#menu div
-{
-display: inline-block;
-list-style: none;
-line-height: normal;
-}
-
-#menu a:hover
- {
-	text-decoration: none;
-        
-}
- #menu #flip a {
-	text-decoration: none;
-	background:#737373;
-	color: white;
-	text-align:left;
-}
-
-#menu .last {
-margin-left:-70%;
-margin-right:-360%;
-}
-#flip
-{
-
-border:solid 2px #c3c3c3;
-
-}
-#panel,#panel1,#panel2,#panel3, #panel4
-{
-font-color: white;
-padding:5px;
-text-align:center;
-background-color: #555555;
-border:solid 2px #c3c3c3;
-border-radius: 0px 0px 10px 10px;
-
-}
-#panel
-{
-margin-top:-267%;
-margin-right:-135%;
-z-index:2;
-
-padding:2px;
-display:none;
-opacity:1;
-
-}
-
-#panel1
-{
-margin-top:-192%;
-margin-right:-70%;
-
-padding:2px;
-display:none;
-opacity:1;
-
-}
-#panel2
-{
-margin-top:-192%;
-margin-right:-70%;
-
-padding:2px;
-display:none;
-opacity:1;
-
-}
-#panel3
-{
-margin-top:-267%;
-margin-right:-620%;
-
-padding:2px;
-display:none;
-opacity:1;
-
-}
-
-#panel4
-{
-
-margin-top:-267%;
-margin-right:-500%;
-padding:2px;
-display:none;
-opacity:1;
-
-}
-
-.menu_buttons
-{
-text-align:center;
-}
-.sign_out
-{
-color:white;
-text-decoration:none;
-}
-
-</style>
 <body bgcolor="#DFDFDF">
 </head>
 <body>
 
-
-
-
-
 <center>
 <div id="maintable">
-
-
-<table id="menu" valign="top">
-	<tr>
-			
-
-		<td width="200" class="menu_buttons">
-			<a href="/dashboard"id="home_button">home</a>	
-		</td >
-
-		<td width="200" class="menu_buttons">
-			<a href="#" id="flip">Department</a>	
-		</td>
-                <td width="200" class="menu_buttons">
-			<a href="/projects" id="search">Search</a>	
-		</td>
-			<% if user_signed_in? %>
-				<td width="324" class="menu_buttons" style="font-size:17px;font-color:white;" id=usr_name >
-					<%=current_user.username.upcase%>	
-				</td>
-			<%else%>
-
-				<td width="324" class="menu_buttons" style="font-size:17px;font-color:white;">
-					<a href="/users/sign_in" id="login">Login/Signup</a>
-				</td>
-			<%end%>
-
-		<td class="last" id="flip3" width="100" class="menu_buttons">
-			<a href="#">More</a>	
-		</td>
-	</tr>
-</table>
-
-
-
-<table border="0" id="content" align="center" width="1024" cellspacing="4">
-<tr>
-
-<td width="1022" id="amk" height="600" align="center"bgcolor="white" valign="top">
-<center>
-
- 
-<p>These Are The Open Projects</p>
-<ul id="projects">
-<% @project.each do |c| %>
-<li><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%></li>
-<% end %>
-
-
-</td>
-</tr>
-</table>
-
-
 
 <div class="panels">
 
@@ -414,9 +107,40 @@ text-decoration:none;
 <font color="white">
 <h4 id="fliph4"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMORE
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
-<h4>About</h4><hr>
+
 <h4><a href="http://pesit.pes.edu/contact-address" style="text-decoration:none;"><font color="white">Contact Us</font></a></h4><hr>
-<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4>
+<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4><hr>
+<b>Created By</b><br><br>
+
+<div><img src="/img/alok.png" height="50"width="50"   style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+<span style="margin-right:3px;">Alok Shankar M</span><br>
+<a href="http://in.linkedin.com/pub/alok-shankar/75/731/a15"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:alok.shankar.m@gmail.com"><font color="white">Email</font></a></div></div><br>
+
+
+<div><img src="/img/abhinav.png" height="50"width="50"  style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+Abhinav M Kulkarni<br>
+<a href="http://in.linkedin.com/pub/abhinav-kulkarni/5b/126/222"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:abhinavmkulkarni@gmail.com"><font color="white">Email</font></a></div></div><br>
+
+<div><img src="/img/akshay.png" height="50"width="50"  style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+Akshay R Deshpande<br>
+<a href="http://in.linkedin.com/pub/akshay-r-d/78/2a9/88a/"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:jetleerd@gmail.com"><font color="white">Email</font></a></div></div><hr>
+
+
+<b>Under the Guidance Of</b><br><br>
+<div><img src="/img/hod.png" height="50"width="50"  style="float:left;display:inline-block;"/>
+<div style="display:inline-block;">
+Shylaja S Sharath<br>
+<a href="http://in.linkedin.com/pub/shylaja-s-s/1b/409/49b"><font color="white">LinkedIn</font></a><br>
+<a href="mailto:shylaja.sharath@pes.edu"><font color="white">Email</font></a></div></div>
+
+
+
 </font></td></tr>
 </table>
 </div>
@@ -430,12 +154,77 @@ text-decoration:none;
 <h4 id="fliph5"><% if user_signed_in? %><&nbsp&nbsp<%=current_user.username%>&nbsp<% end %>
 </h4><hr>
 
-<h4><a href="#" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
+<h4><a href="<%= current_user.linkedin %>" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
 <h4><a href="/users/edit" style="text-decoration:none;"><font color="white">Edit Profile</font></a></h4><hr>
 <h4><font color="white"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>'sign_out'%></font></h4>
 </font></td></tr>
 </table>
 </div>
+
+
+
+
+
+<table id="menu" valign="top">
+	<tr>
+			
+
+		<td width="200" class="menu_buttons">
+			<a href="/dashboard"id="home_button">home</a>	
+		</td >
+
+		<td width="200" class="menu_buttons">
+			<span style="cursor:pointer;" id="flip">Department</span>	
+		</td>
+                <td width="200" class="menu_buttons">
+			<a href="/projects" id="search">Search</a>	
+		</td>
+			<% if user_signed_in? %>
+				<td width="324" class="menu_buttons" style="font-size:17px;font-color:white;" id=usr_name >
+					<%=current_user.username.upcase%>	
+				</td>
+			<%else%>
+
+				<td width="324" class="menu_buttons" style="font-size:17px;font-color:white;">
+					<a href="/users/sign_in" id="login">Login/Signup</a>
+				</td>
+			<%end%>
+
+		<td class="last" id="flip3" width="100" class="menu_buttons">
+			<span style="cursor:pointer;">More</span>	
+		</td>
+	</tr>
+</table>
+
+<br><br><br>
+
+<table border="0" id="content" align="center" width="1024" cellspacing="4">
+<tr>
+
+<td width="1022" id="amk" height="600" align="center"bgcolor="white" valign="top">
+
+
+
+<center>
+
+<p>These are the current projects in our system</p></center>
+
+
+
+<% @project.each do |c| %>
+<div class="card">
+<center><div class="card1"><br><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%><br><br>
+<font color = #818181><%= c.description[0...300] %>...<br><br></font></div></center></div>
+<% end %>
+
+<% if @no>10 %>
+<div class="card2" style="width:400px;display:inline-block;"><center><%= paginate @project %></center></div><br><br>
+<% end %>
+
+</td>
+</tr>
+</table>
+
 
 
 

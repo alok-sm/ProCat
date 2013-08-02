@@ -1,0 +1,2 @@
+class ShadowController < ApplicationController
+end

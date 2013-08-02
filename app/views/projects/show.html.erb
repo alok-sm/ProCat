@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test2</title>
+  
 <link rel="stylesheet" type="text/css" href="/stylesheet.css">
   <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
 <link href="/assets/dashboard.css?body=1" media="all" rel="stylesheet" type="text/css" />
@@ -542,7 +542,7 @@ Shylaja S Sharath<br>
 <h4 id="fliph5"><% if user_signed_in? %><&nbsp&nbsp<%=current_user.username%>&nbsp<% end %>
 </h4><hr>
 
-<h4><a href="<%= current_user.linkedin %>" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
+<h4><a href="<% if user_signed_in? %><%= current_user.linkedin %><% end %>" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
 <h4><a href="/users/edit" style="text-decoration:none;"><font color="white">Edit Profile</font></a></h4><hr>
 <h4><font color="white"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>'sign_out'%></font></h4>
 </font></td></tr>
@@ -798,10 +798,12 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <center>
 <div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:770px;">
 <b>People working on this project:</b><br><br>
-<% ar=@project.department.to_s.split(";") %>
-<% @users = User.where(:code => ar) %>
+<% @ar=@project.department.to_s.split(";") %>
+<% @ar.each{ |ar_each| %>
+<% if User.where(:code => ar_each).present? %>
+<% @users = User.where(:code => ar_each) %>
 
-<% @users.each do |c| %>
+<% c=@users.first %>
 
 <div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
 
@@ -822,7 +824,12 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <% end %>
 </center>
 </div>
+<% else %>
+<div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
+<center><b><%= ar_each %></b>, Who is not currently registered on this website.</center>
+</div>
 <% end %>
+<% } %>
 </div>
 </center>
 
@@ -840,10 +847,12 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <center>
 <div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:770px;">
 <b>Guides:</b><br><br>
-<% ar=@project.guides.to_s.split(";") %>
-<% @users = User.where(:code => ar) %>
+<% @ar=@project.guides.to_s.split(";") %>
+<% @ar.each{ |ar_each| %>
+<% if User.where(:code => ar_each).present? %>
+<% @users = User.where(:code => ar_each) %>
 
-<% @users.each do |c| %>
+<% c=@users.first %>
 
 <div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
 
@@ -860,7 +869,12 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <% end %>
 </center>
 </div>
+<% else %>
+<div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;">
+<center><b><%= ar_each %></b>, Who is not currently registered on this website.</center>
+</div>
 <% end %>
+<% } %>
 </div>
 </center>
 
@@ -974,7 +988,74 @@ Edit This Project
 </center>
 <% end %>
 <% end %>
+
+
+
+
 <br>
+
+
+
+
+
+
+
+
+
+
+
+<center>
+
+<table width="500" max-height="500" >
+<tr><td width="500" max-height="500" >
+
+
+<div  style="padding:20px;background-color:#F9F9F9;box-shadow:0px 0px 8px 0px #BBBBBB;border-radius:7px;width:770px;">
+<center><b>Comments</b></center><br>
+
+
+<% if user_signed_in?%><center>
+<div class="card0" style="background-color:#EFEFEF;width:720px;padding:5px;"><center>
+<%= form_for(:project) do |f| %>
+
+ <br><b>Add a new Comment:</b><br><br>
+   <%= f.text_area(:comment_tmp, :size => '80x3', :autocomplete => :off) %><br><br>
+<%= f.submit "Submit" %><br><br>
+
+<% end %>
+</center></div></center>
+<% else %>
+<center><a href="/users/sign_in">Log In</a> or <a href="/users/sign_up">Sign Up</a> to add new Comments</center><br><br>
+<% end %>
+
+<% @msg=@project.comments.to_s.split("%d%") %>
+<% @msg = Kaminari.paginate_array(@msg).page(params[:page]).per(10) %>
+ <% @msg.each{ |each_msg|%> 
+<%stuff=each_msg.split("%n%")%>
+<center>
+<div class="card0" style="background-color:#EFEFEF;width:690px;padding:5px 20px 5px 20px;">
+<p><b><%=stuff.second%> </b><%=stuff.third%></p></div></center>
+
+
+<%}%>
+<center><%= paginate @msg %></center>
+
+
+
+</td></tr>
+</table>
+
+</center>
+
+</div>
+<br>
+
+
+
+
+
+
+
 
 
 </td>

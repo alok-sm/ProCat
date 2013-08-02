@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130729085710) do
+ActiveRecord::Schema.define(:version => 20130801140024) do
 
   create_table "groupings", :force => true do |t|
     t.string   "code"
@@ -64,6 +64,16 @@ ActiveRecord::Schema.define(:version => 20130729085710) do
     t.text     "patent_stuff"
     t.text     "product_stuff"
     t.text     "paper_stuff"
+    t.text     "comments"
+    t.text     "comment_tmp"
+  end
+
+  create_table "shadows", :force => true do |t|
+    t.text     "code"
+    t.text     "p_list"
+    t.text     "g_list"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "uploads", :force => true do |t|
@@ -102,6 +112,11 @@ ActiveRecord::Schema.define(:version => 20130729085710) do
     t.text     "projects"
     t.string   "linkedin"
     t.integer  "access_level"
+    t.string   "company"
+    t.integer  "year"
+    t.string   "department"
+    t.text     "projects_g"
+    t.integer  "istate",                 :default => 2,  :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

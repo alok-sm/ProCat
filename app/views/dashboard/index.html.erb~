@@ -350,27 +350,36 @@ text-decoration:none;
 
 <div  style="padding:20px;background-color:#F9F9F9;border:1px solid #A0A0A0;box-shadow:0px 0px 8px 0px #737373;border-radius:7px;width:450px;height:400px;overflow:auto;overflow-x:hidden;">
 <br>
-<% ar=current_user.projects.to_s.split(";") %>
+<center><b>Working on </b></center><br>
+<% ar=current_user.projects.to_s.split(";")%>
 <% ar.shift %>
+<% arb=current_user.projects_g.to_s.split(";")%>
+<% arb.shift %>
 <% ar.each{ |x| %>
 <% c=Project.where(id:x).first %>
-
-
 <div class="card0" style="background-color:#EFEFEF;width:400px;padding:5px;">
-
 <%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%>
 <br><br>
 <font color = #818181>
 <%= c.description[0...130] %>...
 </font>
-
 </div>
-
-
-
 <% }%>
 
+<center><b>Working as a guide on </b></center><br>
+<% ar=arb %>
+<% ar.each{ |x| %>
+<% c=Project.where(id:x).first %>
+<div class="card0" style="background-color:#EFEFEF;width:400px;padding:5px;">
+<%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%>
+<br><br>
+<font color = #818181>
+<%= c.description[0...130] %>...
+</font>
 </div>
+<% }%>
+</div>
+
 <br>
 <% if current_user.access_level != 3 %>
 <b><a href="/projects/new" style="font-family:arial;text-decoration:none;">ADD NEW PROJECT</a></b>
@@ -503,7 +512,7 @@ Shylaja S Sharath<br>
 <h4 id="fliph5"><&nbsp&nbsp<%=current_user.username%>&nbsp
 </h4><hr>
 
-<h4><a href="current_user.linkedin" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
+<h4><a href="<%=current_user.linkedin%>" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
 <h4><a href="/users/edit" style="text-decoration:none;"><font color="white">Edit Profile</font></a></h4><hr>
 <h4><font color="white"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>'sign_out'%></font></h4>
 </font></td></tr>

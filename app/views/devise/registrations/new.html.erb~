@@ -83,7 +83,36 @@ $(document).ready(function(){
     $("#panel4").fadeOut("fast");
   }); 
 });
-
+$(document).ready(function(){
+   $("#flipaccess1").click(function(){
+    $("#panelaccess1").fadeToggle("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipaccess2").click(function(){
+    $("#panelaccess2").fadeToggle("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#flipaccess3").click(function(){
+    $("#panelaccess3").fadeToggle("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliphaccess1").click(function(){
+    $("#panelaccess1").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliphaccess2").click(function(){
+    $("#panelaccess2").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliphaccess3").click(function(){
+    $("#panelaccess3").fadeOut("fast");
+  }); 
+});
 </script>
 
 <style type="text/css">  
@@ -94,7 +123,11 @@ $(document).ready(function(){
 {
 position:absolute;
 }
+.panels1
+{
+position:relative;
 
+}
 
 #maintable
 {
@@ -272,7 +305,11 @@ text-align:center;
 color:white;
 text-decoration:none;
 }
-
+#panelaccess1,#panelaccess2,#panelaccess3
+{
+margin-top:-1.8%;
+display:none;
+}
 </style>
 <body bgcolor="#DFDFDF">
 </head>
@@ -443,14 +480,11 @@ Shylaja S Sharath<br>
 
 
 
-
-
-
-
 <br>
 <h2>Sign up</h2>
-<br></center>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<br></center>
+
   <%= devise_error_messages! %>
   <div><%= f.label :username %><br />
   <%= f.text_field :username %></div>
@@ -458,16 +492,7 @@ Shylaja S Sharath<br>
   <div><%= f.label :USN_or_faculty_code %><br />
   <%= f.text_field :code %></div>
 <br>
-<div>User Type<br />
-  <%= f.radio_button :access_level, "1"%>Teacher
-  <%= f.radio_button :access_level, "2"%>Student
-  <%= f.radio_button :access_level, "3"%>External Agency<br>
-</div>
-<br>
-  <div><%= f.label :contact_number %><br />
-  <%= f.text_field :contact %></div>
-<br>
-  <div><%= f.label :email %><br />
+<div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 <br>
   <div><%= f.label :password %><br />
@@ -476,17 +501,208 @@ Shylaja S Sharath<br>
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 <br>
+  <div>User Type<br />
+  <div id="flipaccess2"style="display:inline-block;"><%= f.radio_button :access_level, "1"%></div>Teacher
+  <div id="flipaccess1"style="display:inline-block;"><%= f.radio_button :access_level, "2"%></div>Student
+  <div id="flipaccess3"style="display:inline-block;"><%= f.radio_button :access_level, "3"%></div>External Agency<br>
+</div>
+<center>
+<div class="panels1">
+<table width="500"  id="panelaccess1" class="card0" >
+<tr><td width="500">
+
+
+<br>
+<center><font id="fliphaccess1" size="4.5" style="margin-bottom:1000px;cursor:pointer;"><b><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClick to Close
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></font></center><hr>
+
+<div style="margin-left:30px;">
+<b><%= f.label(:department,"Department :") %></b><br>
+
+  <br>
+
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"bt"%>
+      BE-Biotechnology</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"cv"%>
+      BE-Civil Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"cs"%>
+      BE-Computer Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"ee"%>
+      BE-Electrical And Electronics Engineering</label>
+  <br>
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"ec"%>
+      BE-Electronics And Communication Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"is"%>
+      BE-Information Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"me"%>
+      BE-Mechanical Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"tc"%>
+      BE-Telecommunication Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"bca"%>
+      Bachelor of Computer Application</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mba"%>
+      Master of Buisness Administration</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mca"%>
+      Master of Computer Application</label>
+ <br>
+   
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mcs"%>
+      MTech-Computer Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mec"%>
+      MTech-Electronics And Communications Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mme"%>
+      MTech-Mechanical Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mse"%>
+      MTech-Software Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mwt"%>
+      MTech-Web Technologies</label>
+<h3>Year:</h3>
+&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :year,"1"%>First year</label>
+<br>
+&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :year,"2"%>Second year</label>
+<br>
+&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :year,"3"%>third year</label>
+<br>
+&nbsp&nbsp&nbsp&nbsp<%= f.radio_button :year,"4"%>Fourth year</label>
+<br>
+</div>
+</td></tr>
+</table>
+</div> 
+<div class="panels1">
+<table width="500"  id="panelaccess2" class="card0">
+<tr><td width="500">
+
+
+<br>
+<center><font id="fliphaccess2" size="4.5" style="margin-bottom:1000px;cursor:pointer;"><b><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClick to Close
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></font></center><hr>
+
+<div style="margin-left:30px;">
+<b><%= f.label(:department,"Department :") %></b><br>
+
+  <br>
+
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"bt"%>
+      BE-Biotechnology</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"cv"%>
+      BE-Civil Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"cs"%>
+      BE-Computer Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"ee"%>
+      BE-Electrical And Electronics Engineering</label>
+  <br>
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"ec"%>
+      BE-Electronics And Communication Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"is"%>
+      BE-Information Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"me"%>
+      BE-Mechanical Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"tc"%>
+      BE-Telecommunication Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"bca"%>
+      Bachelor of Computer Application</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mba"%>
+      Master of Buisness Administration</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mca"%>
+      Master of Computer Application</label>
+ <br>
+   
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mcs"%>
+      MTech-Computer Science and Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mec"%>
+      MTech-Electronics And Communications Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mme"%>
+      MTech-Mechanical Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mse"%>
+      MTech-Software Engineering</label>
+  <br>
+    
+      &nbsp&nbsp&nbsp&nbsp<%= f.radio_button :department,"mwt"%>
+      MTech-Web Technologies</label>
+</div>
+</td></tr>
+</table>
+</div> 
+
+<div class="panels1">
+<table width="350"  id="panelaccess3" class="card0">
+<tr><td width="350">
+<br>
+<center><font id="fliphaccess3" size="4.5" style="margin-bottom:1000px;cursor:pointer;"><b><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClick to Close
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></font></center><hr>
+<center><%= f.label(:company,"Where are you from?") %></b>
+   &nbsp&nbsp<%= f.text_field(:company) %></center>
+
+</td></tr>
+</table>
+</div>
+</center>
+<br>
+  <div><%= f.label :contact_number %><br />
+  <%= f.text_field :contact %></div>
+<br>
   <div><%= f.label  :LinkedIn_Url %><br>
  <font color="#555555" size="2">Paste your public profile URL here(Don't forget the "http://")</font><br>
 
-  <%= f.text_field :linkedin, :size => "40"%></div><br>
+  <%= f.text_field :linkedin, :size => "40", :value => "http://"%></div><br>
 
+<div><%= f.submit "Sign up" %></div>
 
-
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
 <br>
 <%= render "devise/shared/links" %>
+<br><br>
+  
 
 
 
@@ -512,7 +728,7 @@ Shylaja S Sharath<br>
 
 
 
-
+<% end %>
 </div>
 </center>
 </body>

@@ -6,7 +6,6 @@
 <link rel="stylesheet" type="text/css" href="/stylesheet.css">
 <link rel="stylesheet" type="text/css" href="/stylesheet2.css">
 
-<title>Test2</title>
 <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
 <link href="/assets/dashboard.css?body=1" media="all" rel="stylesheet" type="text/css" />
 <link href="/assets/dept.css?body=1" media="all" rel="stylesheet" type="text/css" />
@@ -154,7 +153,7 @@ Shylaja S Sharath<br>
 <h4 id="fliph5"><% if user_signed_in? %><&nbsp&nbsp<%=current_user.username%>&nbsp<% end %>
 </h4><hr>
 
-<h4><a href="<%= current_user.linkedin %>" style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
+<h4><a href=<% if user_signed_in? %>"<%= current_user.linkedin %>"<% end %>  style="text-decoration:none;"><font color="white">Linked-In Profile</font></a></h4><hr>
 <h4><a href="/users/edit" style="text-decoration:none;"><font color="white">Edit Profile</font></a></h4><hr>
 <h4><font color="white"><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>'sign_out'%></font></h4>
 </font></td></tr>
@@ -213,16 +212,14 @@ Shylaja S Sharath<br>
 
 
 <% @project.each do |c| %>
-<div class="card">
-<center><div class="card1"><br><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%><br><br>
-<font color = #818181><%= c.description[0...300] %>...<br><br></font></div></center></div>
+<div class="card9">
+<div class="card10"><br><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%><span style="float:right;"><% if c.start_date.nil? %><% else %>start date : <%= c.start_date %><% end %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<% if c.end_date.nil? %><% else %> End date :<%= c.end_date %><% end %></span><br><br>
+<font color = #818181><%= c.description[0...300] %>...<br><br></font></div></div>
 <% end %>
 
 <% if @no>10 %>
 <div class="card2" style="width:400px;display:inline-block;"><center><%= paginate @project %></center></div><br><br>
 <% end %>
-
-
 </td>
 </tr>
 </table>

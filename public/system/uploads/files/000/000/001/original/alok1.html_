@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test2</title>
+  <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dashboard.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dept.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/home.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/projects.css?body=1" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/dashboard.js?body=1" type="text/javascript"></script>
+<script src="/assets/dept.js?body=1" type="text/javascript"></script>
+<script src="/assets/home.js?body=1" type="text/javascript"></script>
+<script src="/assets/projects.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="If+cU3KeuZl65228b3j0eb9MR/NoznyglqrwM0MDAR0=" name="csrf-token" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").fadeToggle("fast");
+    $("#panel3").fadeOut("fast");
+  });
+});
+$(document).ready(function(){
+  $("#flip1").click(function(){
+    $("#panel1").fadeToggle("fast");
+  });
+});
+$(document).ready(function(){
+   $("#flip2").click(function(){
+    $("#panel2").fadeToggle("fast");
+  });
+});
+$(document).ready(function(){
+   $("#flip3").click(function(){
+    $("#panel3").fadeToggle("fast");
+    $("#panel").fadeOut("fast");
+    $("#panel1").fadeOut("fast");
+    $("#panel2").fadeOut("fast");
+  });
+}); 
+
+
+
+$(document).ready(function(){
+   $("#fliph1").click(function(){
+    $("#panel").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph2").click(function(){
+    $("#panel1").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph3").click(function(){
+    $("#panel2").fadeOut("fast");
+  }); 
+});
+$(document).ready(function(){
+   $("#fliph4").click(function(){
+    $("#panel3").fadeOut("fast");
+  }); 
+});
+
+
+</script>
+
+<style type="text/css">  
+
+
+
+.panels
+{
+position:absolute;
+}
+
+
+
+#maintable
+{
+width:1024px;
+position:relative;
+
+}
+#content
+{
+
+}
+#amk
+{
+border-radius: 10px 10px 10px 10px;
+width:600px;
+height:600px;
+}
+h2.a3
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 18px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 70%;
+	font-weight: normal;
+}
+h1.a4
+{
+	border-bottom: 4px solid #1E0B6A;
+	color: #26156E;
+	font-size: 30px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	width: 50%;
+	font-weight: normal;
+}
+body 
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 200;
+	color: #000000;
+	
+}
+
+
+#menu
+{
+	overflow: hidden;
+	width: 1024px;
+	padding: 0px 0px;
+	margin: 0px auto 0px auto;
+	background:#737373;
+	border-radius: 0px 0px 13px 13px;
+	font-size: 20px;
+	color: white;
+}
+#menu a
+{
+	display: block;
+	padding: 15px 40px 15px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 200;
+	color: white;
+	border: none;
+}
+#menu ul {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px;
+	list-style: none;
+	line-height: normal;
+
+}
+#menu li {
+	display: inline-block;
+}
+#menu a:hover
+ {
+	text-decoration: none;
+        
+}
+ #menu .current_page_item a {
+	text-decoration: none;
+        
+}
+#menu .current_page_item a {
+	background:#737373;
+	color: white;
+	text-align:left;
+
+}
+
+#menu .last {
+margin-left:0%;
+margin-right:-360%;
+}
+#flip
+{
+
+border:solid 2px #c3c3c3;
+margin-left:-124%;
+}
+#panel,#panel1,#panel2,#panel3
+{
+font-color: white;
+padding:5px;
+text-align:center;
+background-color: #555555;
+border:solid 2px #c3c3c3;
+border-radius: 0px 0px 10px 10px;
+
+}
+#panel
+{
+margin-top:-264%;
+margin-left:0.3%;
+z-index:2;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel1
+{
+margin-top:-189%;
+margin-left:0.3%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel2
+{
+margin-top:-189%;
+margin-left:0.3%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#panel3
+{
+margin-top:-264%;
+margin-right:-620%;
+
+padding:2px;
+display:none;
+opacity:1;
+
+}
+#search_button
+{
+margin-left:-45%;}
+
+</style>
+<body bgcolor="#DFDFDF">
+</head>
+<body>
+
+
+
+
+
+<center>
+<div id="maintable">
+<div id="menu">
+	
+		<ul>
+			<li class="current_page_item"><a href="#" id="flip">Department</a></li>
+			<li ><a href="#"id="search_button">Search</a></li>
+			<li><td><a href="#" class="last" id="flip3">More</a></li>
+			
+		</ul>
+
+</div>
+
+<table border="0" id="content" align="center" width="1024" cellspacing="4">
+<tr>
+<td width="510" id="amk" height="600"align="left"bgcolor="white" valign="top">
+<center>
+<br><br><img src="http://2.bp.blogspot.com/_gAL4GZ2xQtU/TNg28-4Y2gI/AAAAAAAACpo/T5H0VE2JDZQ/s1600/PESIT+logo.jpg" width="240" height="260" ><br><br><br>
+<br> 
+<h2 class="a3">About <span><b>PESIT</b></span> </h2>
+
+<center>PESIT carries forward the principles <br>
+    and spirit of its founder Chairman <br>
+ Prof.<b>M. R. Doreswamy</b>:innovation,<br>
+ entrepreneurship, outreach and <br>
+     perennial love for quality education.
+</center>
+</center>
+</td>
+<td width="510" id="amk" height="600" align="center"bgcolor="white" valign="top">
+<center><br><br><br><h1 class="a4">Sign <b>In</b></h1><br>
+
+<form accept-charset="UTF-8" action="/users/sign_in" class="new_user" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="If+cU3KeuZl65228b3j0eb9MR/NoznyglqrwM0MDAR0=" /></div>
+
+  <br><div><label for="user_email">Email</label><br />
+  <br><input id="user_email" name="user[email]" size="30" type="email" value="" /></div>
+  <br><div><label for="user_password">Password</label><br />
+  <br><input id="user_password" name="user[password]" size="30" type="password" /></div>
+
+    <br><div><input name="user[remember_me]" type="hidden" value="0" /><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" /> <label for="user_remember_me">Remember me</label></div>
+
+<br>  <br><div><input name="commit" type="submit" value="Sign in" /></div><br><br>
+</form>
+
+  <a href="/users/sign_up">Sign up</a><br />
+
+  <a href="/users/password/new">Forgot your password?</a><br />
+</center>
+</td>
+</tr>
+</table>
+
+
+
+<div class="panels">
+
+<table width="250" id="panel" >
+<tr><td width="250" >
+<font color="white">
+<h4><div id="fliph1">&nbsp<&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDEPARTMENT&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4><div id="flip1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBE    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp></h4><hr>
+<h4><div id="flip2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspM.Tech&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp></h4><hr>
+
+<h4>BCA</h4><hr>
+<h4>MCA</h4><hr>
+<h4>MBA</h4>
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="350"  id="panel1" >
+<tr><td width="350">
+<font color="white">
+<h4 id="fliph2"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspB.E
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4>Bio Technology</h4><hr>
+<h4>Civil</h4><hr>
+<h4>Computer Science</h4><hr>
+<h4>Electronics and Communication</h4><hr>
+<h4>Electricals and Electronics</h4><hr>
+<h4>Information Science</h4><hr>
+<h4>Mechanical</h4><hr>
+<h4>Telecommunication</h4>
+</font></td></tr>
+</table>
+</div>
+
+<div class="panels">
+<table width="350"  id="panel2" >
+<tr><td width="350">
+
+<font color="white">
+<h4 id="fliph3"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspM.Tech
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4>Computer Science and Engineering</h4><hr>
+<h4>Electronics and Communication Engineering</h4><hr>
+<h4>Mechanical Engineering</h4><hr>
+<h4>Software Engineering</h4><hr>
+<h4>Web Technologies</h4>
+</font></td></tr>
+</table>
+</div>
+
+
+<div class="panels">
+<table width="250"  id="panel3" >
+<tr><td width="250">
+<font color="white">
+<h4 id="fliph4"><&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMORE
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h4><hr>
+<h4>About</h4><hr>
+<h4><a href="http://pesit.pes.edu/contact-address" style="text-decoration:none;"><font color="white">Contact Us</font></a></h4><hr>
+<h4><a href="http://pesit.pes.edu/" style="text-decoration:none;"><font color="white">PESIT Homepage</font></a></h4>
+</font></td></tr>
+</table>
+</div>
+
+
+
+
+
+
+</div>
+</center>
+</body>
+</html>
+
+
+
+
+
+
