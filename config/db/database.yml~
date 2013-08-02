@@ -1,0 +1,23 @@
+development:
+  adapter: sqlite3
+  encoding: unicode
+  database: Test2
+  pool: 5
+  username: alok
+  password:
+
+test:
+  adapter: sqlite3
+  encoding: unicode
+  database: Test2
+  pool: 5
+  username: alok
+  password:
+
+production:
+  adapter: sqlite3
+  encoding: unicode
+  database: Test2
+  pool: 5
+  username: alok
+  password:

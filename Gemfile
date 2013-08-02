@@ -15,6 +15,7 @@ gem 'ransack'
 gem "date-input-rails"
 
 gem "kaminari"
+
 gem "pg"
 
 

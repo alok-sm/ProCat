@@ -28,7 +28,7 @@ def create
       else
      @shadow=Shadow.new
 	@shadow.code = std_each
-	@shadow.p_list = @project.id
+	@shadow.p_list = ";#{@project.id}"
      @shadow.save 
 	end
 	 end
@@ -54,10 +54,10 @@ def create
       lt.g_list="#{lt.g_list};#{@project.id}"
       lt.save
       else
-     @late=Shadow.new
-	@late.code = std_each
-	@late.g_list = @project.id
-	@late.save
+     @Shadow=Shadow.new
+	@shadow.code = std_each
+	@shadow.g_list = ";#{@project.id}"
+	@shadow.save
       end
 
 	 end
@@ -66,7 +66,7 @@ def create
 	@users = User.where(:code => @std)
 
 	@users.each do |c|
-	c.projects = "#{c.projects};#{@project.id}"
+	c.projects_g = "#{c.projects_g};#{@project.id}"
 	c.save
 	end
 	end
@@ -135,7 +135,7 @@ newg=@project.guides.to_s.split(";")
 new.each { |new_each| 
 	if (old.include?(new_each))
 	else
-		puts "im in new guide"
+		puts "im in new member"
      if User.where(:code => new_each).present?
     
 		@users = User.where(:code => new_each)
@@ -155,7 +155,7 @@ puts c.projects
       else
      @late=Shadow.new
 	@late.code = new_each
-	@late.p_list = @project.id
+	@late.p_list = ";#{@project.id}"
 	@late.save
       end
 
@@ -165,7 +165,7 @@ end
 old.each { |old_each|
 	if (new.include?(old_each))
 	else
-		puts "im in delete guide"
+		puts "im in delete member"
      if User.where(:code => old_each).present?
      
 		@users = User.where(:code => old_each)
@@ -198,11 +198,11 @@ newg.each { |new_each|
      if User.where(:code => new_each).present?
 		@users = User.where(:code => new_each)
 		c=@users.first
-puts c.projects
-		c.projects = "#{c.projects};#{@project.id}"
-		puts c.projects
+puts c.projects_g
+		c.projects_g = "#{c.projects_g};#{@project.id}"
+		puts c.projects_g
 		c.save
-puts c.projects
+puts c.projects_g
 		@users.first.save
 	else
       if Shadow.where(:code => new_each).present?
@@ -213,26 +213,26 @@ puts c.projects
       else
      @late=Shadow.new
 	@late.code = new_each
-	@late.g_list = @project.id
+	@late.g_list = ";#{@project.id}"
 	@late.save
 	end
 end
 end
 }
-oldg.each { |old_each|
-	if (newg.include?(old_each))
+oldg.each { |oldg_each|
+	if (newg.include?(oldg_each))
 	else
 		puts "im in delete guide"
-     if User.where(:code => old_each).present?
-		@users = User.where(:code => old_each)
+     if User.where(:code => oldg_each).present?
+		@users = User.where(:code => oldg_each)
 		c=@users.first
-		c.projects.gsub!(";#{@project.id}","")
-		x=c.projects
+		c.projects_g.gsub!(";#{@project.id}","")
+		x=c.projects_g
 		c.reload
-		c.update_attributes(:projects => x)
+		c.update_attributes(:projects_g => x)
 		@users.first.save
 	else
-		@shadow = Shadow.where(:code => old_each)
+		@shadow = Shadow.where(:code => oldg_each)
 		c=@shadow.first
 		c.g_list.gsub!(";#{@project.id}","")
 		x=c.g_list

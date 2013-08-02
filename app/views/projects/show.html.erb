@@ -552,7 +552,7 @@ Shylaja S Sharath<br>
 
 
 
-<% if user_signed_in? and @all.include?(current_user.code) %>
+<% if user_signed_in? and (@all.include?(current_user.code) or @every.include?(current_user.code)) %>
 <div class="panels" >
 <div id="msgpanel" style="width:500px;">
 <table width="500" max-height="500" >
@@ -601,7 +601,7 @@ Shylaja S Sharath<br>
 
 
 
-<% if user_signed_in? and @all.include?(current_user.code) %>
+<% if user_signed_in? and (@all.include?(current_user.code) or @every.include?(current_user.code)) %>
 
 
 <table id="menu" valign="top">
@@ -819,7 +819,7 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <% if c.contact.blank?%><%else%><b>Phone: </b><%= c.contact %><br><%end%>
 <% if c.contact.blank?%><%else%><b>Email: </b>
 <a href="mailto:<%= c.email %>" target="_top"><%= c.email %></a><br><%end%>
-<% if c.projects.to_s.count(";").to_i > 1 %>
+<% if (((c.projects.to_s.count(";"))+(c.projects.to_s.count(";"))).to_i) > 1 %>
 <%= link_to "More projects by #{c.username}", {:controller => 'view', :action => 'show', :id => c.id} -%><br>
 <% end %>
 </center>
@@ -864,7 +864,7 @@ Details:<br><%= @project.paper_stuff %></div><% end %>
 <% if c.contact.blank?%><%else%><b>Phone: </b><%= c.contact %><br><%end%>
 <% if c.contact.blank?%><%else%><b>Email: </b>
 <a href="mailto:<%= c.email %>" target="_top"><%= c.email %></a><br><%end%>
-<% if c.projects.to_s.count(";").to_i > 1 %>
+<% if (((c.projects.to_s.count(";"))+(c.projects.to_s.count(";"))).to_i) > 1 %>
 <%= link_to "More projects by #{c.username}", {:controller => 'view', :action => 'show', :id => c.id} -%><br>
 <% end %>
 </center>

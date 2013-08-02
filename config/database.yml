@@ -14,7 +14,7 @@ test:
   username: alok
   password:
 
-development:
+production:
   adapter: postgresql
   encoding: unicode
   database: Test2

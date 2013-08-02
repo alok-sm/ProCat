@@ -214,7 +214,7 @@ Shylaja S Sharath<br>
 
 <% @project.each do |c| %>
 <div class="card9">
-<div class="card10"><br><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%><span style="float:right;"><% if c.start_date.nil? %><% else %>start date : <%= c.start_date %><% end %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<% if c.end_date.nil? %><% else %> End date :<%= c.end_date %><% end %></span><br><br>
+<div class="card10"><br><%= link_to c.p_title, {:controller => 'projects', :action => 'show', :id => c.id} -%><span style="float:right;"><% if c.start_date.nil? %><% else %>start date : <%= c.start_date %><% end %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<% if c.end_date.nil? %><% else %> End date : <%= c.end_date %><% end %></span><br><br>
 <font color = #818181><%= c.description[0...300] %>...<br><br></font></div></div>
 <% end %>
 
