@@ -15,7 +15,7 @@ gem 'ransack'
 gem "date-input-rails"
 
 gem "kaminari"
-gem "pg"
+gem "sqlite3"
 
 
 # Gems used only for assets and not required
